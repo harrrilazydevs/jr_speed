@@ -53,6 +53,7 @@
     </section>
 
     <section class="section banner banner-section row page" id="div_home">
+        
             <div class="container banner-column">
                 <img src="img/grayPreview.png" alt="missing img-banner-bike" class="banner-image">
                 <div class="banner-inner">

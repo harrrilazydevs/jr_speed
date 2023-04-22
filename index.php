@@ -3,34 +3,35 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Co   mpatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JRSpeed Marketing</title>
     <link rel="stylesheet" href="src/bootstrap/bs.css">
     <link rel="stylesheet" href="src/style/all.css">
     <link rel="stylesheet" href="src/style/user.css">
      <!-- FONT AWESOME -->
+     
      <script src="https://kit.fontawesome.com/f200f2da0d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/style/control_panel.css">
 </head>
 
 <body>
 
-    <div id="pane_user" >
+    <div id="pane_user">
 
         <?php include 'src/pages/user.php'; ?>
 
-
     </div>
 
-    <div id="pane_admin" style="display:none;">
+    <div id="pane_admin" style="display: none;">
 
         <?php include 'src/pages/admin.php'; ?>
 
     </div>
 
-    <div id="pane_controlpanel" style="display:none;">
+    <div id="pane_controlpanel">
 
-        <?php include 'src/pages/admin.php'; ?>
+        <?php include 'src/pages/control_panel.php'; ?>
 
     </div>
 
