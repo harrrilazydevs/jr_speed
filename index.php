@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="src/bootstrap/bs.css">
     <link rel="stylesheet" href="src/style/all.css">
     <link rel="stylesheet" href="src/style/user.css">
-     <!-- FONT AWESOME -->
-     
-     <script src="https://kit.fontawesome.com/f200f2da0d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/fontawesome/fa.css">
     <link rel="stylesheet" href="src/style/control_panel.css">
 </head>
 
