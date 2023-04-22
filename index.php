@@ -15,7 +15,7 @@
 
 <body>
 
-    <div id="pane_user">
+    <div id="pane_user" style="display: none;">
 
         <?php include 'src/pages/user.php'; ?>
 
@@ -35,6 +35,7 @@
 
     <script src="src/bootstrap/bs.js"></script>
     <script src="src/jquery/jquery.js"></script>
+    <script src="src/fontawesome/fa.js"></script>
     <script src="src/func/all.js"></script>
     <script src="src/func/user.js"></script>
     <script src="src/func/admin.js"></script>
