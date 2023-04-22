@@ -8,6 +8,9 @@
     <title>JRSpeed Marketing</title>
     <link rel="stylesheet" href="src/bootstrap/bs.css">
     <link rel="stylesheet" href="src/style/all.css">
+    <link rel="stylesheet" href="src/style/user.css">
+     <!-- FONT AWESOME -->
+     <script src="https://kit.fontawesome.com/f200f2da0d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -34,6 +37,7 @@
     <script src="src/bootstrap/bs.js"></script>
     <script src="src/jquery/jquery.js"></script>
     <script src="src/func/all.js"></script>
+    <script src="src/func/user.js"></script>
     <script src="src/func/admin.js"></script>
 </body>
 
