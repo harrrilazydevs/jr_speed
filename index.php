@@ -36,6 +36,8 @@
     <script src="src/bootstrap/bs.js"></script>
     <script src="src/jquery/jquery.js"></script>
     <script src="src/fontawesome/fa.js"></script>
+    <script src="src/chartsjs/chart.js"></script>
+
     <script src="src/func/all.js"></script>
     <script src="src/func/user.js"></script>
     <script src="src/func/admin.js"></script>
