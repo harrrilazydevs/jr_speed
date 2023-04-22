@@ -12,7 +12,7 @@
 
 <body>
 
-    <div id="panel_user">
+    <div id="pane_user" style="display:none;">
 
         <nav class="navbar navbar-expand-lg bg-body-tertiary banner">
 
@@ -99,11 +99,15 @@
 
     </div>
 
-    <div id="panel_admin" style="display:none;">
+    <div id="pane_admin">
 
         <?php
         include 'admin.php';
         ?>
+
+    </div>
+
+    <div id="pane_controlpanel">
 
     </div>
 

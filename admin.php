@@ -48,7 +48,7 @@
 
         </div>
 
-        <button class="btn btn-primary d-none d-lg-block">Login</button>
+        <button class="btn btn-primary d-none d-lg-block" id="btn_goto_adminpanel">Admin Panel</button>
 
     </div>
 </nav>
