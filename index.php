@@ -101,13 +101,13 @@
 
     <div id="pane_admin">
 
-        <?php
-        include 'admin.php';
-        ?>
+        <?php include 'src/pages/admin.php'; ?>
 
     </div>
 
     <div id="pane_controlpanel">
+
+        <?php include 'src/pages/admin.php'; ?>
 
     </div>
 
