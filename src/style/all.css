@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.banner {
+    background: #101419 !important;
+    width: 100%;
+    height: 8vh;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+.logo>span {
+    font-size: 24pt;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+    letter-spacing: -1px !important;
+    color: white !important;
+    margin-top: 20px;
+}
