@@ -109,7 +109,7 @@
                 </div>
 
 
-                <table class="table mt-3">
+                <table class="table mt-3" id="cp_tbl_bikeslist">
                     <thead>
                         <tr>
                             <th class="text-center" width="5%">NO</th>

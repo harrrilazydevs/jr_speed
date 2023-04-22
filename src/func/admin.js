@@ -1,15 +1,15 @@
 $(document).ready(function () {
+  cp_load_bikes();
+
   $("#btn_goto_adminpanel").click(function () {
     $("#pane_admin").hide();
     $("#pane_controlpanel").show();
     $("#div_cp_bm").show();
-
   });
 
   $("#btn_goto_admin").click(function () {
     $("#pane_admin").show();
     $("#pane_controlpanel").hide();
-
   });
 
   $("#btn_goto_bm").click(function () {
@@ -17,6 +17,7 @@ $(document).ready(function () {
     $("#div_cp_bm").show();
     $(".clickable").trigger("click");
   });
+
   $("#btn_goto_sm").click(function () {
     $(".page").hide();
     $("#div_cp_sm").show();
@@ -41,11 +42,13 @@ $(document).ready(function () {
   });
 
   ctx = document.getElementById("slm_chart").getContext("2d");
+
   var myChart = new Chart(ctx, {
     type: "line",
     data: {},
     options: {},
   });
+
   function write_chart(products, sales) {
     myChart.destroy();
 
@@ -69,6 +72,42 @@ $(document).ready(function () {
             beginAtZero: true,
           },
         },
+      },
+    });
+  }
+
+  function cp_load_bikes() {
+    $.ajax({
+      type: "GET",
+      url: "src/database/func/admin/cp_read_bike_list.php",
+      success: function (data) {
+
+        console.log(data);
+
+        output = "";
+        counter = 1;
+
+        $.each(JSON.parse(data), function (key, val) {
+          output +=
+            `
+            <tr>
+                <td class="text-center">`+ counter +`</td>
+                <td>`+ val.type +`</td>
+                <td>`+ val.name +`</td>
+                <td><a href="`+ val.img +`" target="_blank">`+ val.img +`</a></td>
+                <td>₱`+val.price+`</td>
+                <td class="text-end">
+                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i class="fa-solid fa-box-archive"></i>
+                </td>
+            </tr>
+          `;
+
+          counter = counter + 1;
+        });
+
+        $("#cp_tbl_bikeslist tbody").empty().append(output);
       },
     });
   }
