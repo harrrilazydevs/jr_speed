@@ -19,8 +19,8 @@
         </div>
 
         <?php
-            if ((isset($_SESSION['submit-login']) && $_SESSION['submit-login'] == true) || (isset($_SESSION['submit-register']) && $_SESSION['submit-register'] == true)) {
-                echo "
+        if ((isset($_SESSION['submit-login']) && $_SESSION['submit-login'] == true) || (isset($_SESSION['submit-register']) && $_SESSION['submit-register'] == true)) {
+            echo "
                     <navigation-user-container>
                         <div class='user' id='user-header'>
                             <ul>
@@ -70,13 +70,13 @@
                     <script src='userDropdown.js'></script>
                     <script src='burgerList.js'></script>
                     ";
-            }else{
-                echo "<div class='sign-in-up'>
+        } else {
+            echo "<div class='sign-in-up'>
                         <a href='login.php' class='menu-block'>Login</a>
                     </div>
                     <script src='burgerList.js'></script>
                     ";
-            }
+        }
         ?>
     </nav>
 </header>
@@ -151,16 +151,15 @@
                     </p>
                     <button class="btn btn-darken btn-inline ms-5">
                         View More! <i class="fa-solid fa-eye"></i></a>
-                    </div>
-                </div>s
+                </div>
             </div>
+
         </section>
 
-        <section style="display: none;">
+        <section>
             <div class="container py-5">
                 <div class="row min-vh-50">
                     <h3 class="text-black">Our Products</h3>
-                    <hr class="text-black">
                     <div class="col-lg-12">
                         <div class="row">
                             <div class="col-lg-4 mb-sm-3 mb-3">
@@ -249,7 +248,9 @@
                 </div>
             </div>
         </section>
+
     </div>
+
 
     <div class="row page" style="display: none; background-image: url('src/img/shop_sec.png') !important; background-repeat: no-repeat; background-position: left !important; background-size: cover; background-attachment: fixed;" id="div_contact">
 
@@ -265,7 +266,7 @@
             </div>
         </section>
 
-        <section class="mt-5 pt-4 my-5" style="">
+        <section class="mt-5 pt-4 my-5">
             <div class="container">
                 <div class="row miv-vh-100 align-items-center">
                     <div class="row text-center text-white">
@@ -310,7 +311,7 @@
         </section>
     </div>
 
-    <div class="row page"  style="display: none;" id="div_faq" >
+    <div class="row page" style="display: none;" id="div_faq">
         <section style="background-color: whitesmoke;">
             <div class="container my-lg-5 text-black">
                 <div class="row align-items-center" style="height: 200px;">
@@ -325,7 +326,7 @@
 
         <section class="mt-5 my-5">
             <div class="container text-center">
-                <div class="row"> 
+                <div class="row">
                     <div class="col-lg-6 pb-lg-5 mb-lg-5">
                         <img src="src/img/faq.gif" class="faq_image" width="80%" style="object-fit: contain;">
                     </div>
