@@ -139,7 +139,7 @@
         </section>
     </div>
 
-    <div class="row page" style="display: none;" id="div_shop">
+    <div class="row page" style="display: ;" id="div_shop">
         <section class="row page">
             <div class="container banner-column mt-5 pt-5 my-5" style="max-width: 75rem; height: auto; margin: 0 auto; padding: 0 1.25rem;">
                 <div class="banner-inner">
@@ -159,7 +159,8 @@
         <section>
             <div class="container py-5">
                 <div class="row min-vh-50">
-                    <h3 class="text-black">Our Products</h3>
+                    <h3 class="text-black ps-5">Our Products</h3>
+                    <hr class="text-black">
                     <div class="col-lg-12">
                         <div class="row">
                             <div class="col-lg-4 mb-sm-3 mb-3">
@@ -253,7 +254,6 @@
 
 
     <div class="row page" style="display: none; background-image: url('src/img/shop_sec.png') !important; background-repeat: no-repeat; background-position: left !important; background-size: cover; background-attachment: fixed;" id="div_contact">
-
         <section style="background-color: white;">
             <div class="container my-lg-5">
                 <div class="row align-items-center" style="height: 400px;">
