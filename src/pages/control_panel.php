@@ -79,7 +79,7 @@
                     <ul class="sidenav-list ms-0 ps-1">
 
                         <li class="mb-1">
-                            <a class="text-dark ms-1" id="btn_admin_logout">
+                            <a class="text-dark ms-1 btn_logout" >
                                 <i class="fa-solid fa-arrow-right-from-bracket fa-fw fa-sm pe-1"></i>
                                 Logout
                             </a>
@@ -176,6 +176,7 @@
                                 <th>NAME</th>
                                 <th class="text-center" width="10%">STOCKS</th>
                                 <th class="text-center" width="10%">LSI</th>
+                                <th class="text-center" width="15%">LAST MODIFIED</th>
                                 <th width="7%"></th>
                             </tr>
                         </thead>
@@ -509,6 +510,7 @@
 
 
     </div>
+    
 </div>
 
 <div id="pane_admin" style="display:none;">

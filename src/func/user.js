@@ -1,7 +1,3 @@
-
-
-
-
 $(document).ready(function () {
   $("#header_home").click(function () {
     $(".page").hide();

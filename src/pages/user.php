@@ -38,63 +38,17 @@ session_start();
 
 
 
-        if ((isset($_SESSION['submit-login']) && $_SESSION['submit-login'] == true) || (isset($_SESSION['submit-register']) && $_SESSION['submit-register'] == true)) {
-            echo "
-                    <navigation-user-container>
-                        <div class='user' id='user-header'>
-                            <ul>
-
-                                <div class='navbar-notification'>
-                                    <li>
-                                        <i class='bx bx-bell' id='notification'></i>
-                                    </li>
-                                </div>
-                                
-                                <li>
-                                    <i class='bx bx-shopping-bag' id='cart'></i>
-                                </li>
-                                <li class='user-dropdown-menu'>
-                                    <img src='$_SESSION[profile_img]' alt='Profile Image' class='profile'> 
-                                        <ul class='user-menu'>
-                                            <li class = 'sub-item '>
-                                                <div class='user-name'>
-                                                    $_SESSION[name]
-                                                </div>
-                                            </li>
-                                            
-                                            <li class = 'sub-item'>
-                                                <i class='bx bx-edit'>
-                                                <a href='#'>Profile</a></i>
-                                            </li>
-
-                                            <li class = 'sub-item'>
-                                                <i class='bx bx-heart'>
-                                                <a href='#'>Wishlist</a></i>
-                                            </li>
-                                            <li class = 'sub-item'>
-                                                <i class='bx bx-box'>
-                                                <a href='#'>My Orders</a></i>
-                                            </li>
-                                            <li class = 'sub-item'>
-                                                <i class='bx bx-exit' >
-                                                <a href='logout.php'>Logout</a></i>
-                                            </li>
-
-                                        </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </navigation-user-container>
-                    
-                    <script src='userDropdown.js'></script>
-                    <script src='burgerList.js'></script>
-                    ";
-        } else {
+        if ($_SESSION['authorized'] == 0) {
             echo "<div class='sign-in-up'>
-                        <a href='login.php' class='menu-block'>Login</a>
-                    </div>
-                    <script src='burgerList.js'></script>
-                    ";
+            <a href='login.php' class='menu-block'>Login</a>
+            </div>
+        ";
+        } else {
+            echo "
+            <div class='sign-in-up'>
+            <a href='login.php' class='menu-block btn_logout'>Logout</a>
+            </div>
+            ";
         }
         ?>
     </nav>

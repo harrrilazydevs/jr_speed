@@ -50,7 +50,7 @@ $('#submitBtn').click(function () {
     });
 })
 
-$('#btn_admin_logout').click(function () {
+$('.btn_logout').click(function () {
 
     $.post("src/database/func/logout.php", (data) => {
 

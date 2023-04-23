@@ -31,6 +31,7 @@ $("#btn_goto_slm").click(function () {
 
 });
 
+// go to account maintenance
 $("#btn_goto_am").click(function () {
 
   $(".page").hide();
@@ -74,7 +75,7 @@ $(document).ready(function () {
     $('#header_home').click();
   });
 
-
+  // product maintenance add btn
   $("#btn_pm_add").click(function () {
     $('#cp_md_add_product').modal('show')
   })
@@ -124,8 +125,6 @@ function load_products() {
 
     });
 
-
-
     $("#cp_tbl_productlist tbody").empty().append(output)
     $("#stock_product_id").empty().append(sel_product)
 
@@ -174,36 +173,9 @@ function load_accounts() {
 
       counter = counter + 1;
 
-      // accounts['A' + val.id] =
-      // {
-      //   type: val.type,
-      //   name: val.name,
-      //   img: val.img,
-      //   price: val.price,
-      //   description: val.description
-      // }
-
     });
 
     $("#cp_tbl_accountlist tbody").empty().append(output)
-
-    // $('.btn_view_product').click(function () {
-    //   $('#cp_md_vw_product').modal('show')
-    //   $('#vwp_img').attr('src', products['A' + $(this).attr('prod_id')].img)
-    //   $('#vwp_type').val(products['A' + $(this).attr('prod_id')].type)
-    //   $('#vwp_name').val(products['A' + $(this).attr('prod_id')].name)
-    //   $('#vwp_price').val(products['A' + $(this).attr('prod_id')].price)
-    //   $('#vwp_description').val(products['A' + $(this).attr('prod_id')].description)
-    // })
-
-    // $('.btn_edit_product').click(function () {
-    //   $('#cp_md_ed_product').modal('show')
-    //   $('#edp_img').attr('src', products['P' + $(this).attr('prod_id')].img)
-    //   $('#edp_type').val(products['P' + $(this).attr('prod_id')].type)
-    //   $('#edp_name').val(products['P' + $(this).attr('prod_id')].name)
-    //   $('#edp_price').val(products['P' + $(this).attr('prod_id')].price)
-    //   $('#edp_description').val(products['P' + $(this).attr('prod_id')].description)
-    // })
 
   });
 

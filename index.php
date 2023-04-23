@@ -30,6 +30,8 @@ session_start();
 
     ?>
 
+
+
     <div class="pane" id="pane_admin" style="display:none;">
 
         <?php include 'src/pages/admin.php'; ?>
