@@ -230,6 +230,8 @@ img {
     }
 }
 
+
+
 .menu.is-active {
     top: 0;
     width: 100%;
@@ -279,7 +281,7 @@ img {
 }
 
 
-@media (min-width: 48rem) {
+@media (min-width: 70rem) {
     .menu {
         position: relative;
         top: 0;
@@ -327,16 +329,64 @@ img {
     transition: .35s ease;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 70rem) {
     .burger {
         display: none;
         visibility: hidden;
     }
 }
 
-@media (max-width: 48rem) {
+
+
+@media (max-width: 70rem) {
     .menu-link {
-        color: var(--color-white-100);
+        color: var(--color-white-100) !important;
+    }
+    #div_home{
+        margin-top: 10% !important;
+    }
+    .banner-image{
+        width: 70% !important;
+    }
+    .heading-xl, .paragraph{
+        font-size: 10pt !important;
+        padding-left: 5rem !important;
+    }
+
+    .heading-xl{
+        padding-top: 6rem !important;
+    }
+
+    .btn-inline{
+        margin-left: 5rem !important;
+    }
+    .contact_container, .faq_container{
+        margin-top: 10% !important;
+    }
+}
+
+@media (max-width: 55rem) {
+    .menu-link {
+        color: var(--color-white-100) !important;
+    }
+    #div_home{
+        margin-top: 10% !important;
+    }
+    .banner-image{
+        width: 70% !important;
+    }
+    .heading-xl, .paragraph{
+        font-size: 10pt !important;
+        padding-left: 5rem !important;
+    }
+
+    .heading-xl{
+        padding-top: 6rem !important;
+    }
+
+    .btn-inline{
+        margin-left: 5rem !important;
+
     }
 }
 
@@ -991,6 +1041,35 @@ img {
     }
 
 }
+
+@media only screen and (device-width: 820px) {
+
+    .menu-link {
+        color: var(--color-white-100) !important;
+    }
+    #div_home{
+        margin-top: 10% !important;
+    }
+    .banner-image{
+        width: 70% !important;
+    }
+    .heading-xl, .paragraph{
+        font-size: 10pt !important;
+        padding-left: 5rem !important;
+    }
+
+    .heading-xl{
+        padding-top: 6rem !important;
+    }
+
+    .btn-inline{
+        margin-left: 5rem !important;
+    }
+
+  
+}
+
+
 @media only screen and (device-width: 768px) {
 
     /* HOME PAGE */
