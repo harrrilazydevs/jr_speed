@@ -139,19 +139,24 @@
         </section>
     </div>
 
-    <div class="row page" id="div_shop">
-        <section style="background-color: whitesmoke;">
-            <div class="container mt-lg-5 my-lg-5">
-                <div class="row align-items-center" style="height: 300px;">
-                    <div class="col-lg-12 col-sm-12 text-center mt-lg-5">
-                        <h1 style="letter-spacing: 7px; font-size: 40pt;" class="text-black">Our Shop</h1>
-                        <a href='#' class='menu-block'>View More <i class="fa-solid fa-eye"></i></a>
+    <div class="row page" style="display: none;" id="div_shop">
+        <section class="row page">
+            <div class="container banner-column mt-5 pt-5 my-5" style="max-width: 75rem; height: auto; margin: 0 auto; padding: 0 1.25rem;">
+                <div class="banner-inner">
+                    <h2 class="heading-xl ps-5 mt-4">Buy NOW</h2>
+                    <p class="paragraph ps-5">
+                        Start your journey by discovering Jrspeed PH,
+                        as you ride your bike, parts will wear down and need tuning or replacing.
+                        Keep your steed in top notch condition by having it professionally maintained by our factory trained technicians.
+                    </p>
+                    <button class="btn btn-darken btn-inline ms-5">
+                        View More! <i class="fa-solid fa-eye"></i></a>
                     </div>
-                </div>
+                </div>s
             </div>
         </section>
 
-        <section>
+        <section style="display: none;">
             <div class="container py-5">
                 <div class="row min-vh-50">
                     <h3 class="text-black">Our Products</h3>
