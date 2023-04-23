@@ -940,3 +940,95 @@ img {
     transform: scale(1.1) !important;
     transition: 0.6s;
 }
+
+/* MEDIA SCREENS */
+@media only screen and (min-width: 2000px) {
+
+}
+@media only screen and (max-device-width: 375px){
+
+    /* HOME PAGE */
+    .banner-image{
+        margin-top: 5rem !important;
+        text-align: center !important;
+    }
+
+    /* CONTACT PAGE */
+    .contact_container{
+        margin-top: 5rem !important;
+        text-align: center !important;
+
+    }
+    
+    /* FAQ PAGE */
+    .faq_container{
+        margin-top: 5rem !important;
+        text-align: center !important;
+
+    }
+
+}
+
+@media only screen and (max-device-width: 414px){
+    /* HOME PAGE */
+    .banner-image{
+        margin-top: 5rem !important;
+        text-align: center !important;
+    }
+
+    /* CONTACT PAGE */
+    .contact_container{
+        margin-top: 5rem !important;
+        text-align: center !important;
+
+    }
+
+    /* FAQ PAGE */
+    .faq_container{
+        margin-top: 3rem !important;
+        text-align: center !important;
+
+    }
+
+}
+@media only screen and (device-width: 768px) {
+
+    /* HOME PAGE */
+    .banner-image{
+        margin-top: 5rem !important;
+        text-align: center !important;
+    }
+
+    /* CONTACT PAGE */
+    .contact_container{
+        margin-top: 5rem !important;
+        text-align: center !important;
+    }
+
+    /* FAQ PAGE */
+    .faq_container{
+        margin-top: 5rem !important;
+        text-align: center !important;
+    }
+
+    .faq_image{
+        width: 80% !important;
+    }
+
+}
+@media screen and (min-width: 769px) {
+    /* STYLES HERE */
+    .faq_image{
+        width: 75% !important;
+        padding-left: 5% !important;
+        
+    }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* HOME PAGE */
+    .banner-image{
+        margin-top: 5rem !important;
+        text-align: center !important;
+    }
+}

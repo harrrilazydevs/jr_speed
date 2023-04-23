@@ -1,7 +1,7 @@
 <?php
-session_start();
+// session_start();
 
-if ($_SESSION['authorized'] == 0) {
+if ($_SESSION['user'] == 0) {
     // header('location:login.php?');
 }
 
@@ -35,21 +35,18 @@ if ($_SESSION['authorized'] == 0) {
         </div>
 
         <?php
-
-
-
-        if ($_SESSION['authorized'] == 0) {
-            echo "<div class='sign-in-up'>
-            <a href='login.php' class='menu-block'>Login</a>
-            </div>
-        ";
-        } else {
-            echo "
-            <div class='sign-in-up'>
-            <a href='login.php' class='menu-block btn_logout'>Logout</a>
-            </div>
+            if ($_SESSION['user'] == 0) {
+                echo "<div class='sign-in-up'>
+                <a href='login.php' class='menu-block'>Login</a>
+                </div>
             ";
-        }
+            } else {
+                echo "
+                <div class='sign-in-up'>
+                <a href='login.php' class='menu-block btn_logout'>Logout</a>
+                </div>
+                ";
+            }
         ?>
     </nav>
 </header>
@@ -254,10 +251,10 @@ if ($_SESSION['authorized'] == 0) {
 
     <div class="row page" style="display: none;" id="div_contact">
         <section style="background-color: whitesmoke;">
-            <div class="container my-lg-5">
+            <div class="container my-lg-5 contact_container">
                 <div class="row align-items-center" style="height: 250px;">
                     <div class="col-lg-12 col-sm-12 text-center mb-0 pb-0">
-                        <h1 style="letter-spacing: 7px; font-size: 40pt; color: #2EEFE2;">SEND A MESSAGE</h1>
+                        <h3 style="letter-spacing: 7px; font-size: 30pt; color: #2EEFE2;" class="">SEND A MESSAGE</h3>
                         <h3 id="text" style="letter-spacing: 3px; font-size: 15pt;" class="text-black"></h3>
                         <p style="font-size: small;" class="text-black">We always welcome your feedback about our service and your in-store experience – whether you found it friendly and helpful, or it fell short of your expectations.</p>
                     </div>
@@ -312,7 +309,7 @@ if ($_SESSION['authorized'] == 0) {
 
     <div class="row page" style="display: none;" id="div_faq">
         <section style="background-color: whitesmoke;">
-            <div class="container my-lg-5 text-black">
+            <div class="container my-lg-5 text-black faq_container">
                 <div class="row align-items-center" style="height: 200px;">
                     <div class="col-lg-12 col-sm-12 text-center pt-5">
                         <h1 style="letter-spacing: 4px; font-size: 20pt;">Frequenly Asked Questions <span>(FAQ).</span></h1>
@@ -327,7 +324,7 @@ if ($_SESSION['authorized'] == 0) {
             <div class="container text-center">
                 <div class="row">
                     <div class="col-lg-6 pb-lg-5 mb-lg-5">
-                        <img src="src/img/faq.gif" class="faq_image" width="80%" style="object-fit: contain;">
+                        <img src="src/img/faq.gif" class="faq_image" style="object-fit: contain;">
                     </div>
                     <div class="col-lg-6 mt-5 my-lg-5 pt-lg-5">
                         <div class="accordion" id="accordionExample">
