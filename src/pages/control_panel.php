@@ -262,7 +262,7 @@
 
 
             <div class="page_cp_content mt-1 pt-2 border-top">
-                <div class="text-center" style="height:500px; width:100%;">
+                <div class="text-center" style="height:350px; width:100%;">
                     <canvas class="mx-auto my-0" id="slm_chart" height="600" width="1300"></canvas>
                 </div>
 
