@@ -11,80 +11,23 @@
         </div>
         <div class="menu" id="menu">
             <ul class="menu-inner pe-4">
-                <li class="menu-item"><a href="index.php" class="menu-link" id="header-home">Home</a></li>
-                <li class="menu-item"><a href="#" class="menu-link" id="header-shop">Shop</a></li>
-                <li class="menu-item"><a href="contact.php" class="menu-link" id="header-contact">Contact</a></li>
-                <li class="menu-item"><a href="#" class="menu-link" id="header-faq">FAQ</a></li>
+                <li class="menu-item"><a class="menu-link" id="header_home">Home</a></li>
+                <li class="menu-item"><a class="menu-link" id="header_shop">Shop</a></li>
+                <li class="menu-item"><a class="menu-link" id="header_contact">Contact</a></li>
+                <li class="menu-item"><a class="menu-link" id="header_faq">FAQ</a></li>
             </ul>
         </div>
+        <div class='sign-in-up'>
+            <a href='login.php' class='menu-block'>Login</a>
+        </div>
 
-        <?php
-            if ((isset($_SESSION['submit-login']) && $_SESSION['submit-login'] == true) || (isset($_SESSION['submit-register']) && $_SESSION['submit-register'] == true)) {
-                echo "
-                    <navigation-user-container>
-                        <div class='user' id='user-header'>
-                            <ul>
-
-                                <div class='navbar-notification'>
-                                    <li>
-                                        <i class='bx bx-bell' id='notification'></i>
-                                    </li>
-                                </div>
-                                
-                                <li>
-                                    <i class='bx bx-shopping-bag' id='cart'></i>
-                                </li>
-                                <li class='user-dropdown-menu'>
-                                    <img src='$_SESSION[profile_img]' alt='Profile Image' class='profile'> 
-                                        <ul class='user-menu'>
-                                            <li class = 'sub-item '>
-                                                <div class='user-name'>
-                                                    $_SESSION[name]
-                                                </div>
-                                            </li>
-                                            
-                                            <li class = 'sub-item'>
-                                                <i class='bx bx-edit'>
-                                                <a href='#'>Profile</a></i>
-                                            </li>
-
-                                            <li class = 'sub-item'>
-                                                <i class='bx bx-heart'>
-                                                <a href='#'>Wishlist</a></i>
-                                            </li>
-                                            <li class = 'sub-item'>
-                                                <i class='bx bx-box'>
-                                                <a href='#'>My Orders</a></i>
-                                            </li>
-                                            <li class = 'sub-item'>
-                                                <i class='bx bx-exit' >
-                                                <a href='logout.php'>Logout</a></i>
-                                            </li>
-
-                                        </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </navigation-user-container>
-                    
-                    <script src='userDropdown.js'></script>
-                    <script src='burgerList.js'></script>
-                    ";
-            }else{
-                echo "<div class='sign-in-up'>
-                        <a href='login.php' class='menu-block'>Login</a>
-                    </div>
-                    <script src='burgerList.js'></script>
-                    ";
-            }
-        ?>
     </nav>
 </header>
 <div style="overflow: hidden;">
 
     <div class="row page" style="display: none;" id="div_home">
         <!-- HOME SECTION -->
-        <section class="row page" id="div_home">
+        <section class="row page">
             <div class="container banner-column mt-lg-5 pt-lg-5 my-lg-5" style="max-width: 75rem; height: auto; margin: 0 auto; padding: 0 1.25rem;">
                 <img src="src/img/grayPreview.png" alt="missing img-banner-bike" class="banner-image">
                 <div class="banner-inner">
@@ -131,6 +74,7 @@
         <section class="feature">
             <div class="feature-title">
                 <h3 class="feature-title-display">What's Hot</h3>
+                <p>Philippines!</p>
             </div>
 
             <div class="feature-items">
@@ -151,12 +95,11 @@
                     </p>
                     <button class="btn btn-darken btn-inline ms-5">
                         View More! <i class="fa-solid fa-eye"></i></a>
-                    </div>
-                </div>s
+                </div>
             </div>
         </section>
 
-        <section style="display: none;">
+        <section style="display: block;">
             <div class="container py-5">
                 <div class="row min-vh-50">
                     <h3 class="text-black">Our Products</h3>
@@ -251,7 +194,7 @@
         </section>
     </div>
 
-    <div class="row page" style="display: none; background-image: url('src/img/shop_sec.png') !important; background-repeat: no-repeat; background-position: left !important; background-size: cover; background-attachment: fixed;" id="div_contact">
+    <div class="row page" style="display: block; background-image: url('src/img/shop_sec.png') !important; background-repeat: no-repeat; background-position: left !important; background-size: cover; background-attachment: fixed;" id="div_contact">
 
         <section style="background-color: white;">
             <div class="container my-lg-5">
@@ -265,7 +208,7 @@
             </div>
         </section>
 
-        <section class="mt-5 pt-4 my-5" style="">
+        <section class="mt-5 pt-4 mt-5" style="">
             <div class="container">
                 <div class="row miv-vh-100 align-items-center">
                     <div class="row text-center text-white">
@@ -310,7 +253,7 @@
         </section>
     </div>
 
-    <div class="row page"  style="display: none;" id="div_faq" >
+    <div class="row page" style="display: none;" id="div_faq">
         <section style="background-color: whitesmoke;">
             <div class="container my-lg-5 text-black">
                 <div class="row align-items-center" style="height: 200px;">
@@ -325,7 +268,7 @@
 
         <section class="mt-5 my-5">
             <div class="container text-center">
-                <div class="row"> 
+                <div class="row">
                     <div class="col-lg-6 pb-lg-5 mb-lg-5">
                         <img src="src/img/faq.gif" class="faq_image" width="80%" style="object-fit: contain;">
                     </div>

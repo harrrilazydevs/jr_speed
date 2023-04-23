@@ -1,3 +1,30 @@
+
+
+
+
+$(document).ready(function () {
+  $("#header_home").click(function () {
+    $(".page").hide();
+    $("#div_home").show();
+
+  });
+  $("#header_shop").click(function () {
+    $(".page").hide();
+    $("#div_shop").show();
+
+  });
+  $("#header_contact").click(function () {
+    $(".page").hide();
+    $("#div_contact").show();
+
+  });
+  $("#header_faq").click(function () {
+    $(".page").hide();
+    $("#div_faq").show();
+
+  });
+});
+
 let headerMenu = document.querySelector(".header");
 let navLink = document.querySelectorAll(".menu-link");
 let companyName = document.querySelector(".companyName");
@@ -5,30 +32,30 @@ let companyLogo = document.querySelector(".companyLogo");
 
 
 window.addEventListener("scroll", () => {
-    if(window.scrollY >= 85) {
-        headerMenu.classList.add("on-scroll");
-        companyName.classList.add("on-scroll");
-        companyLogo.classList.add("on-scroll");
+  if (window.scrollY >= 85) {
+    headerMenu.classList.add("on-scroll");
+    companyName.classList.add("on-scroll");
+    companyLogo.classList.add("on-scroll");
 
-        navLink.forEach(link => {
-            link.classList.add("on-scroll");
-        });
+    navLink.forEach(link => {
+      link.classList.add("on-scroll");
+    });
 
 
-    } else {
-        headerMenu.classList.remove("on-scroll");
-        companyName.classList.remove("on-scroll");
-        companyLogo.classList.remove("on-scroll");
+  } else {
+    headerMenu.classList.remove("on-scroll");
+    companyName.classList.remove("on-scroll");
+    companyLogo.classList.remove("on-scroll");
 
-        navLink.forEach(link => {
-            link.classList.remove("on-scroll");
-        });
+    navLink.forEach(link => {
+      link.classList.remove("on-scroll");
+    });
 
-    }
+  }
 });
 
 
-var i=0,text;
+var i = 0, text;
 text = "Contact JRSPEED PH."
 function typing() {
   if (i < text.length) {
@@ -130,31 +157,3 @@ togglePasswordButton.addEventListener('click', function () {
 
 
 
-
-
-$(document).ready(function () {
-  $(".btn_nav_home").click(function () {
-    $(".page").hide();
-    $("#div_home").show();
-    $('.nav__link').removeClass('active-link')
-    $(this).addClass('active-link')
-  });
-  $(".btn_nav_shop").click(function () {
-    $(".page").hide();
-    $("#div_shop").show();
-    $('.nav__link').removeClass('active-link')
-    $(this).addClass('active-link')
-  });
-  $(".btn_nav_contact").click(function () {
-    $(".page").hide();
-    $("#div_contact").show();
-    $('.nav__link').removeClass('active-link')
-    $(this).addClass('active-link')
-  });
-  $(".btn_nav_faq").click(function () {
-    $(".page").hide();
-    $("#div_faq").show();
-    $('.nav__link').removeClass('active-link')
-    $(this).addClass('active-link')
-  });
-});
