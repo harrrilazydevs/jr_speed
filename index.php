@@ -15,7 +15,7 @@
 
 <body>
 
-    <div id="pane_user" style="display: none;">
+    <div id="pane_user">
 
         <?php include 'src/pages/user.php'; ?>
 
@@ -27,7 +27,7 @@
 
     </div>
 
-    <div id="pane_controlpanel">
+    <div id="pane_controlpanel" style="display: none;">
 
         <?php include 'src/pages/control_panel.php'; ?>
 
