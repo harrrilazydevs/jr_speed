@@ -282,7 +282,7 @@
                     </table>
 
                     <div class="text-end">
-                        <button class="btn btn-primary btn-sm"><i class="fa-solid fa-user-plus"></i> Add</button>
+                        <button class="btn btn-primary btn-sm" id="btn_aa_add_account"><i class="fa-solid fa-user-plus"></i> Add</button>
 
                     </div>
                 </div>
@@ -519,6 +519,92 @@
             </div>
         </div>
 
+
+        <!-- Modal -->
+        <div class="modal fade text-dark" id="cp_md_add_account" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Account</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="">Username</label>
+                                    <input type="text" class="form-control mb-2" id="cp_aa_user">
+
+                                    <label for="">Password</label>
+                                    <input type="text" class="form-control mb-2" id="cp_aa_pass">
+
+                                    <label for="">Position</label>
+                                    <input type="text" class="form-control mb-2" id="cp_aa_position">
+
+                                    <label for="">Email</label>
+                                    <input type="text" class="form-control mb-2" id="cp_aa_email">
+
+                                    <label for="">Mobile</label>
+                                    <input type="text" class="form-control mb-2" id="cp_aa_contact">
+
+                                    <label for="">First Name</label>
+                                    <input type="text" class="form-control mb-2" id="cp_aa_fname">
+
+                                    <label for="">Last Name</label>
+                                    <input type="text" class="form-control mb-2" id="cp_aa_lname">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" id="btn_aa_save">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade text-dark" id="cp_md_update_account" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Update Account</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="">Username</label>
+                                    <input type="text" class="form-control mb-2" id="cp_ua_user">
+
+                                    <label for="">Password</label>
+                                    <input type="text" class="form-control mb-2" id="cp_ua_pass">
+
+                                    <label for="">Position</label>
+                                    <input type="text" class="form-control mb-2" id="cp_ua_position">
+
+                                    <label for="">Email</label>
+                                    <input type="text" class="form-control mb-2" id="cp_ua_email">
+
+                                    <label for="">Mobile</label>
+                                    <input type="text" class="form-control mb-2" id="cp_ua_contact">
+
+                                    <label for="">First Name</label>
+                                    <input type="text" class="form-control mb-2" id="cp_ua_fname">
+
+                                    <label for="">Last Name</label>
+                                    <input type="text" class="form-control mb-2" id="cp_ua_lname">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" id="btn_ua_save">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </div>
@@ -881,5 +967,18 @@
             </section>
         </div>
 
+    </div>
+</div>
+
+<button type="button" class="btn-close d-none" data-bs-dismiss="toast" data-bs-target="#my-toast" id="trigger_toast" aria-label="Close"></button>
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+        <img src="..." class="rounded me-2" alt="...">
+        <strong class="me-auto">Bootstrap</strong>
+        <small>11 mins ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+        Hello, world! This is a toast message.
     </div>
 </div>

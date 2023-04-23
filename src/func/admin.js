@@ -22,7 +22,7 @@ $("#btn_goto_sm").click(function () {
   }, 200);
 });
 
-$('#btn_goto_dm').click(function(){
+$('#btn_goto_dm').click(function () {
   alert('...')
 })
 
@@ -59,6 +59,26 @@ $('.btn_cp_close_sidebar').click(function () {
 
 $('#btn_stocks_add').click(function () {
   $('#cp_md_add_stock').modal('show')
+})
+
+$('#btn_aa_add_account').click(function () {
+  $('#cp_md_add_account').modal('show')
+})
+
+$('#btn_aa_save').click(function () {
+  data = {
+    user: $('#cp_aa_user').val(),
+    pass: $('#cp_aa_pass').val(),
+    position: $('#cp_aa_position').val(),
+    email: $('#cp_aa_email').val(),
+    contact: $('#cp_aa_contact').val(),
+    fname: $('#cp_aa_fname').val(),
+    lname: $('#cp_aa_lname').val(),
+  };
+  $.post('src/database/func/admin/add_account.php', data, function (data) {
+    $('#trigger_toast').trigger('click')
+    load_accounts();
+  })
 })
 
 
@@ -156,6 +176,8 @@ function load_products() {
 
 function load_accounts() {
 
+  let accounts = {};
+
   $.getJSON("src/database/func/admin/read_accounts_list.php", (data) => {
     output = "";
     counter = 1;
@@ -169,17 +191,70 @@ function load_accounts() {
         <td class="text-center">`+ val.contact + `</td>
         <td class="text-center">`+ val.position.toUpperCase() + `</td>
         <td class="text-end">
-          <a class="btn_view_product hoverable-btn" prod_id="`+ val.id + `"> <i class="fa-solid fa-eye"></i><a/>
-          <a class="btn_edit_product hoverable-btn" prod_id="`+ val.id + `"> <i class="fa-solid fa-pen-to-square"></i><a/>
-          <a class="btn_archive_product hoverable-btn" prod_id="`+ val.id + `"> <i class="fa-solid fa-box-archive"></i><a/>
+          <a class="btn_view_account hoverable-btn" acc_id="`+ val.id + `"> <i class="fa-solid fa-eye"></i><a/>
+          <a class="btn_edit_account hoverable-btn" acc_id="`+ val.id + `"> <i class="fa-solid fa-pen-to-square"></i><a/>
+          <a class="btn_delete_account hoverable-btn" acc_id="`+ val.id + `"> <i class="fa-solid fa-box-archive"></i><a/>
         </td>
       </tr>`;
 
       counter = counter + 1;
 
+      accounts[val.id] = {
+        user: val.user,
+        email: val.email,
+        contact: val.contact,
+        position: val.position,
+        fname: val.fname,
+        lname: val.lname,
+        pass: val.pass,
+      }
+
     });
 
     $("#cp_tbl_accountlist tbody").empty().append(output)
+
+    $('.btn_edit_account').click(function () {
+      $('#cp_md_update_account').modal('show');
+      $('#cp_ua_user').val(accounts[$(this).attr('acc_id')].user)
+      $('#cp_ua_email').val(accounts[$(this).attr('acc_id')].email)
+      $('#cp_ua_contact').val(accounts[$(this).attr('acc_id')].contact)
+      $('#cp_ua_position').val(accounts[$(this).attr('acc_id')].position)
+      $('#cp_ua_fname').val(accounts[$(this).attr('acc_id')].fname)
+      $('#cp_ua_lname').val(accounts[$(this).attr('acc_id')].lname)
+      $('#cp_ua_pass').val(accounts[$(this).attr('acc_id')].pass)
+      $('#btn_ua_save').attr('attr-id', $(this).attr('acc_id'))
+    })
+
+    $('.btn_delete_account').click(function () {
+      data = {
+        id: $(this).attr('acc_id')
+      };
+
+      $.post('src/database/func/admin/delete_account.php', data, function (data) {
+        alert('Account Deleted...')
+        load_accounts();
+      })
+    })
+
+
+
+    $('#btn_ua_save').click(function () {
+      data = {
+        user: $('#cp_ua_user').val(),
+        pass: $('#cp_ua_pass').val(),
+        position: $('#cp_ua_position').val(),
+        email: $('#cp_ua_email').val(),
+        contact: $('#cp_ua_contact').val(),
+        fname: $('#cp_ua_fname').val(),
+        lname: $('#cp_ua_lname').val(),
+        id: $(this).attr('attr-id')
+      };
+
+      $.post('src/database/func/admin/update_account.php', data, function (data) {
+        alert('Account Updated...')
+        load_accounts();
+      })
+    })
 
   });
 
