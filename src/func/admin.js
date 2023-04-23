@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  cp_load_bikes();
+  load_bikes();
 
   $("#btn_goto_adminpanel").click(function () {
     $("#pane_admin").hide();
@@ -76,39 +76,85 @@ $(document).ready(function () {
     });
   }
 
-  function cp_load_bikes() {
-    $.ajax({
-      type: "GET",
-      url: "src/database/func/admin/cp_read_bike_list.php",
-      success: function (data) {
+  function load_bikes() {
+    $.getJSON("src/database/func/admin/read_bike_list.php", (data) => {
+      output = "";
+      counter = 1;
 
-        console.log(data);
+      $.each(data, function (key, val) {
+        output +=
+          `
+          <tr>
+              <td class="text-center">` +
+          counter +
+          `</td>
+              <td>` +
+          val.type +
+          `</td>
+              <td>` +
+          val.name +
+          `</td>
+              <td><a href="` +
+          val.img +
+          `" target="_blank">` +
+          val.img +
+          `</a></td>
+              <td>₱` +
+          val.price.toLocaleString("en-US") +
+          `</td>
+              <td class="text-end">
+                  <i class="hoverable-btn fa-solid fa-eye"></i>
+                  <i class="hoverable-btn fa-solid fa-pen-to-square"></i>
+                  <i class="hoverable-btn fa-solid fa-box-archive"></i>
+              </td>
+          </tr>
+        `;
 
-        output = "";
-        counter = 1;
+        counter = counter + 1;
+      });
 
-        $.each(JSON.parse(data), function (key, val) {
-          output +=
-            `
-            <tr>
-                <td class="text-center">`+ counter +`</td>
-                <td>`+ val.type +`</td>
-                <td>`+ val.name +`</td>
-                <td><a href="`+ val.img +`" target="_blank">`+ val.img +`</a></td>
-                <td>₱`+val.price+`</td>
-                <td class="text-end">
-                    <i class="fa-solid fa-eye"></i>
-                    <i class="fa-solid fa-pen-to-square"></i>
-                    <i class="fa-solid fa-box-archive"></i>
-                </td>
-            </tr>
-          `;
+      $("#cp_tbl_bikeslist tbody").empty().append(output);
+    });
+  }
 
-          counter = counter + 1;
-        });
+  function load_bike_stocks() {
+    $.getJSON("src/database/func/admin/read_bike_list.php", (data) => {
+      output = "";
+      counter = 1;
 
-        $("#cp_tbl_bikeslist tbody").empty().append(output);
-      },
+      $.each(data, function (key, val) {
+        output +=
+          `
+          <tr>
+              <td class="text-center">` +
+          counter +
+          `</td>
+              <td>` +
+          val.type +
+          `</td>
+              <td>` +
+          val.name +
+          `</td>
+              <td><a href="` +
+          val.img +
+          `" target="_blank">` +
+          val.img +
+          `</a></td>
+              <td>₱` +
+          val.price.toLocaleString("en-US") +
+          `</td>
+              <td class="text-end">
+                  <i class="hoverable-btn fa-solid fa-eye"></i>
+                  <i class="hoverable-btn fa-solid fa-pen-to-square"></i>
+                  <i class="hoverable-btn fa-solid fa-box-archive"></i>
+              </td>
+          </tr>
+        `;
+
+        counter = counter + 1;
+      });
+
+      $("#cp_tbl_bikeslist tbody").empty().append(output);
     });
   }
 });

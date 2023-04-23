@@ -20,7 +20,7 @@
 
             <ul class="navbar-nav">
 
-                    <!-- <li class="nav-item">
+                <!-- <li class="nav-item">
 
                         <a id="btn_goto_home" class="nav-link text-light active" aria-current="page" href="#">HOME</a>
 
@@ -48,7 +48,7 @@
 
         </div>
 
-        <button class="btn btn-primary d-none d-lg-block" id="btn_goto_admin">View as Customer</button>
+        <button class="btn btn-primary d-none d-lg-block" style="font-size:10pt" id="btn_goto_admin"><i class="fa-solid fa-user"></i> View as Customer</button>
 
     </div>
 </nav>
@@ -93,21 +93,26 @@
 <div class="container">
 
     <div class="row page" id="div_cp_bm">
-        <div class="col p-2  mt-3">
-            <div class="page_cp_header">
-                <p class="lead">Bike's Maintenance</p>
-            </div>
 
+        <div class="col p-2  mt-3">
+
+            <div class="page_cp_header">
+
+                <p class="lead">Bike's Maintenance</p>
+
+            </div>
 
             <div class="page_cp_content mt-1 pt-2 border-top">
 
-                <div class="row bo">
+                <div class="row">
 
                     <div class="col text-end">
-                        <input type="text" class="form-control-sm" style="width:300px;" placeholder="Search..." id="cp_bikelist_search">
-                    </div>
-                </div>
 
+                        <input type="text" class="form-control-sm" style="width:300px;" placeholder="Search..." id="cp_bikelist_search">
+
+                    </div>
+
+                </div>
 
                 <table class="table mt-3" id="cp_tbl_bikeslist">
                     <thead>
@@ -120,92 +125,35 @@
                             <th width="7%"></th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td class="text-center">1</td>
-                            <td>Road Bike</td>
-                            <td>RBA 1002</td>
-                            <td>img/public/21231qwe1.jpg</td>
-                            <td>₱15,000.00</td>
-                            <td class="text-end">
-                                <i class="fa-solid fa-eye"></i>
-                                <i class="fa-solid fa-pen-to-square"></i>
-                                <i class="fa-solid fa-box-archive"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">1</td>
-                            <td>Road Bike</td>
-                            <td>RBA 1002</td>
-                            <td>img/public/21231qwe1.jpg</td>
-                            <td>₱15,000.00</td>
-                            <td class="text-end">
-                                <i class="fa-solid fa-eye"></i>
-                                <i class="fa-solid fa-pen-to-square"></i>
-                                <i class="fa-solid fa-box-archive"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">1</td>
-                            <td>Road Bike</td>
-                            <td>RBA 1002</td>
-                            <td>img/public/21231qwe1.jpg</td>
-                            <td>₱15,000.00</td>
-                            <td class="text-end">
-                                <i class="fa-solid fa-eye"></i>
-                                <i class="fa-solid fa-pen-to-square"></i>
-                                <i class="fa-solid fa-box-archive"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">1</td>
-                            <td>Road Bike</td>
-                            <td>RBA 1002</td>
-                            <td>img/public/21231qwe1.jpg</td>
-                            <td>₱15,000.00</td>
-                            <td class="text-end">
-                                <i class="fa-solid fa-eye"></i>
-                                <i class="fa-solid fa-pen-to-square"></i>
-                                <i class="fa-solid fa-box-archive"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">1</td>
-                            <td>Road Bike</td>
-                            <td>RBA 1002</td>
-                            <td>img/public/21231qwe1.jpg</td>
-                            <td>₱15,000.00</td>
-                            <td class="text-end">
-                                <i class="fa-solid fa-eye"></i>
-                                <i class="fa-solid fa-pen-to-square"></i>
-                                <i class="fa-solid fa-box-archive"></i>
-                            </td>
-                        </tr>
-                    </tbody>
+                    <tbody></tbody>
                 </table>
 
                 <div class="text-end">
                     <button class="btn btn-primary btn-sm">Add</button>
-
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
 
     <div class="row page" style="display:none" id="div_cp_sm">
         <div class="col p-2  mt-3">
+
             <div class="page_cp_header">
                 <p class="lead">Stocks Monitoring</p>
             </div>
 
-
             <div class="page_cp_content mt-1 pt-2 border-top">
 
-                <div class="row bo">
+                <div class="row">
 
                     <div class="col text-end">
                         <input type="text" class="form-control-sm" style="width:300px;" placeholder="Search..." id="cp_bikelist_search">
                     </div>
+
                 </div>
 
 
@@ -241,18 +189,21 @@
                             </td>
                         </tr>
 
-
-
                     </tbody>
+
                 </table>
 
                 <div class="text-end">
                     <button class="btn btn-primary btn-sm">Add</button>
 
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
 
     <div class="row page" style="display:none" id="div_cp_slm">
         <div class="col p-2  mt-3">
@@ -327,6 +278,7 @@
             </div>
         </div>
     </div>
+
 
     <div class="row page" style="display:none" id="div_cp_am">
         <div class="col p-2  mt-3">

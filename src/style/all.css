@@ -27,12 +27,14 @@ body {
   font-size: 10pt;
 }
 .sidenav-list {
-
 }
 .sidenav-list > li:hover {
-  border-right:2px solid #101419;
-  margin-left:30px;
+  border-right: 2px solid #101419;
+  margin-left: 30px;
   cursor: pointer;
   background: #d4e8ff !important;
+}
 
+.nav__link:hover {
+  cursor: pointer;
 }

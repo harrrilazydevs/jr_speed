@@ -4,3 +4,12 @@
 .bg-dark {
   color: #101419 !important;
 }
+.hoverable-btn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  color:#4c4c4ca3
+}
+
+.btn-sm{
+  font-size:10pt !important;
+}

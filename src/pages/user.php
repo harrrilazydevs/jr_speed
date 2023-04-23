@@ -5,10 +5,10 @@
         </a>
         <div class="nav__menu mt-lg-3" id="nav-menu">
             <ul class="nav__list">
-                <li class="nav__item"><a href="index.php" class="nav__link active-link">Home</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Shop</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">FAQ</a></li>
+                <li class="nav__item"><a class="btn_nav_home nav__link active-link">Home</a></li>
+                <li class="nav__item"><a class="btn_nav_shop nav__link">Shop</a></li>
+                <li class="nav__item"><a class="btn_nav_contact nav__link">Contact</a></li>
+                <li class="nav__item"><a class="btn_nav_faq nav__link">FAQ</a></li>
 
                 <?php
                     if (isset($_SESSION['auth'])) {
@@ -122,7 +122,7 @@
                                     <div class="card mt-lg-3" style="background-color: #101419 !important; width: 80%; height: 100%; border: none;">
                                         <div class="card-body text-center">
                                             <div class="image_hover">
-                                                <img src="src/img/bikes/exploro-ultra-force-d1eagle-axs-1x-removebg-preview.png" alt="Category Image" width="100%">
+                                                <img src="src/img/bikes/exploro-ultra-force-d1eagle-axs-1x.png" alt="Category Image" width="100%">
                                             </div>
                                             <h6 style="letter-spacing: 3px; font-size: 12pt; color: white;">Bike #1</h6>
                                         </div>
@@ -135,7 +135,7 @@
                                     <div class="card mt-lg-3" style="background-color: #101419 !important; width: 80%; height: 100%; border: none;">
                                         <div class="card-body text-center">
                                             <div class="image_hover">
-                                                <img src="src/img/bikes/exploro-ultra-rival-1x11_650b-removebg-preview.png" alt="Category Image" width="100%">
+                                                <img src="src/img/bikes/exploro-ultra-rival-1x11_650b.png" alt="Category Image" width="100%">
                                             </div>
                                             <h6 style="letter-spacing: 3px; font-size: 12pt; color: white;">Bike #1</h6>
                                         </div>
@@ -148,7 +148,7 @@
                                     <div class="card mt-lg-3" style="background-color: #101419 !important; width: 80%; height: 100%; border: none;">
                                         <div class="card-body text-center">
                                             <div class="image_hover">
-                                                <img src="src/img/bikes/exploro-ultra-rival-1x11-removebg-preview.png" alt="Category Image" width="100%">
+                                                <img src="src/img/bikes/exploro-ultra-rival-1x11.png" alt="Category Image" width="100%">
                                             </div>
                                             <h6 style="letter-spacing: 3px; font-size: 12pt; color: white;">Bike #1</h6>
                                         </div>
@@ -164,7 +164,7 @@
                                     <div class="card mt-lg-3" style="background-color: #101419 !important; width: 80%; height: 100%; border: none;">
                                         <div class="card-body text-center">
                                             <div class="image_hover">
-                                                <img src="src/img/bikes/new-strada-force-d1-axs-2x12-removebg-preview.png" alt="Category Image" width="100%">
+                                                <img src="src/img/bikes/new-strada-force-d1-axs-2x12.png" alt="Category Image" width="100%">
                                             </div>
                                             <h6 style="letter-spacing: 3px; font-size: 12pt; color: white;">Bike #1</h6>
                                         </div>
@@ -177,7 +177,7 @@
                                     <div class="card mt-lg-3" style="background-color: #101419 !important; width: 80%; height: 100%; border: none;">
                                         <div class="card-body text-center">
                                             <div class="image_hover">
-                                                <img src="src/img/bikes/strada-icr-rival-axs-2x12-removebg-preview.png" alt="Category Image" width="100%">
+                                                <img src="src/img/bikes/strada-icr-rival-axs-2x12.png" alt="Category Image" width="100%">
                                             </div>
                                             <h6 style="letter-spacing: 3px; font-size: 12pt; color: white;">Bike #1</h6>
                                         </div>
@@ -190,7 +190,7 @@
                                     <div class="card mt-lg-3" style="background-color: #101419 !important; width: 80%; height: 100%; border: none;">
                                         <div class="card-body text-center">
                                             <div class="image_hover">
-                                                <img src="src/img/bikes/strada-icr-rival-xplr-removebg-preview.png" alt="Category Image" width="100%">
+                                                <img src="src/img/bikes/strada-icr-rival-xplr.png" alt="Category Image" width="100%">
                                             </div>
                                             <h6 style="letter-spacing: 3px; font-size: 12pt; color: white;">Bike #1</h6>
                                         </div>
@@ -286,19 +286,19 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Accordion Item #1
+                                        How much is a gravel bike?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        <strong>Gravel bike</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, urna ac euismod volutpat, eros urna gravida nisl, ac consectetur tortor enim eu tellus. Nulla vulputate metus id dui ornare volutpat. Quisque et mattis nisl, eu mollis sapien. Vestibulum quis diam convallis, vehicula turpis vel, dapibus ligula. Praesent id justo quam. Aliquam eu lobortis lacus. Donec ullamcorper mauris et ante mollis, in commodo libero vulputate. Donec lobortis sem est, sed maximus mauris congue ac. Aliquam erat volutpat. Sed pretium enim nec erat cursus, a laoreet neque aliquet. Donec dignissim eros risus, ut egestas risus viverra in. Donec iaculis turpis sit amet ipsum aliquet, quis imperdiet neque laoreet. Nullam tincidunt erat et tellus condimentum, ac finibus lorem faucibus.
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Accordion Item #2
+                                        Can i pick up girls using road bike?
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -310,7 +310,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Accordion Item #3
+                                        Can i swap my mtb frame to gravel frame?
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -322,7 +322,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Accordion Item #4
+                                        How to be a millionaire?
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -337,4 +337,5 @@
             </div>
         </section>
     </div>
+
 </div>

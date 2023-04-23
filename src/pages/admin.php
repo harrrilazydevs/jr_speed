@@ -48,7 +48,7 @@
 
         </div>
 
-        <button class="btn btn-primary d-none d-lg-block" id="btn_goto_adminpanel">Admin Panel</button>
+        <button class="btn btn-primary d-none d-lg-block" style="font-size:10pt" id="btn_goto_adminpanel"><i class="fa-solid fa-wrench"></i> Admin Panel</button>
 
     </div>
 </nav>
