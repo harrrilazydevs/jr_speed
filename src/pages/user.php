@@ -139,7 +139,7 @@
         </section>
     </div>
 
-    <div class="row page" style="display: none;" id="div_shop">
+    <div class="row page" id="div_shop">
         <section class="row page">
             <div class="container banner-column mt-5 pt-5 my-5" style="max-width: 75rem; height: auto; margin: 0 auto; padding: 0 1.25rem;">
                 <div class="banner-inner">
@@ -171,6 +171,10 @@
                                                 <img src="src/img/bikes/exploro-ultra-force-d1eagle-axs-1x.png" alt="Category Image" width="100%">
                                             </div>
                                             <h6 style="letter-spacing: 3px; font-size: 12pt; color: black;">Bike #1</h6>
+                                            <p class="text-black">₱ 1500</p>
+                                            <div class='sign-in-up'>
+                                                <a href='#' class='menu-block' style="font-size: smaller;">Add to cart <i class="fa-solid fa-cart-shopping"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
@@ -184,6 +188,11 @@
                                                 <img src="src/img/bikes/exploro-ultra-rival-1x11_650b.png" alt="Category Image" width="100%">
                                             </div>
                                             <h6 style="letter-spacing: 3px; font-size: 12pt; color: black;">Bike #1</h6>
+                                            <p class="text-black">₱ 1500</p>
+
+                                            <div class='sign-in-up'>
+                                                <a href='#' class='menu-block' style="font-size: smaller;">Add to cart <i class="fa-solid fa-cart-shopping"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
@@ -197,6 +206,11 @@
                                                 <img src="src/img/bikes/exploro-ultra-rival-1x11.png" alt="Category Image" width="100%">
                                             </div>
                                             <h6 style="letter-spacing: 3px; font-size: 12pt; color: black;">Bike #1</h6>
+                                            <p class="text-black">₱ 1500</p>
+
+                                            <div class='sign-in-up'>
+                                                <a href='#' class='menu-block' style="font-size: smaller;">Add to cart <i class="fa-solid fa-cart-shopping"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
@@ -214,6 +228,11 @@
                                                 <img src="src/img/bikes/new-strada-force-d1-axs-2x12.png" alt="Category Image" width="100%">
                                             </div>
                                             <h6 style="letter-spacing: 3px; font-size: 12pt; color: black;">Bike #1</h6>
+                                            <p class="text-black">₱ 1500</p>
+
+                                            <div class='sign-in-up'>
+                                                <a href='#' class='menu-block' style="font-size: smaller;">Add to cart <i class="fa-solid fa-cart-shopping"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
@@ -227,6 +246,10 @@
                                                 <img src="src/img/bikes/strada-icr-rival-axs-2x12.png" alt="Category Image" width="100%">
                                             </div>
                                             <h6 style="letter-spacing: 3px; font-size: 12pt; color: black;">Bike #1</h6>
+                                            <p class="text-black">₱ 1500</p>
+                                            <div class='sign-in-up'>
+                                                <a href='#' class='menu-block' style="font-size: smaller;">Add to cart <i class="fa-solid fa-cart-shopping"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
@@ -240,9 +263,13 @@
                                                 <img src="src/img/bikes/strada-icr-rival-xplr.png" alt="Category Image" width="100%">
                                             </div>
                                             <h6 style="letter-spacing: 3px; font-size: 12pt; color: black;">Bike #1</h6>
+                                            <p class="text-black">₱ 1500</p>
+                                            <div class='sign-in-up'>
+                                                <a href='#' class='menu-block' style="font-size: smaller;">Add to cart <i class="fa-solid fa-cart-shopping"></i></a>
+                                            </div>
                                         </div>
                                     </div>
-                                </a>
+                                </a>w
                             </div>
                         </div>
                     </div>
@@ -252,7 +279,7 @@
 
     </div>
 
-    <div class="row page"  id="div_contact">
+    <div class="row page" style="display: none;" id="div_contact">
         <section style="background-color: whitesmoke;">
             <div class="container my-lg-5">
                 <div class="row align-items-center" style="height: 400px;">
