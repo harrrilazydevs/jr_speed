@@ -11,10 +11,10 @@
         </div>
         <div class="menu" id="menu">
             <ul class="menu-inner pe-4">
-                <li class="menu-item"><a href="index.php" class="menu-link" id="header-home">Home</a></li>
-                <li class="menu-item"><a href="#" class="menu-link" id="header-shop">Shop</a></li>
-                <li class="menu-item"><a href="contact.php" class="menu-link" id="header-contact">Contact</a></li>
-                <li class="menu-item"><a href="#" class="menu-link" id="header-faq">FAQ</a></li>
+                <li class="menu-item"><a class="menu-link" id="header_home">Home</a></li>
+                <li class="menu-item"><a class="menu-link" id="header_shop">Shop</a></li>
+                <li class="menu-item"><a class="menu-link" id="header_contact">Contact</a></li>
+                <li class="menu-item"><a class="menu-link" id="header_faq">FAQ</a></li>
             </ul>
         </div>
 
@@ -82,9 +82,9 @@
 </header>
 <div style="overflow: hidden;">
 
-    <div class="row page" style="display: none;" id="div_home">
+    <div class="row page" style="display: block;" id="div_home">
         <!-- HOME SECTION -->
-        <section class="row page" id="div_home">
+        <section class="row" id="div_home">
             <div class="container banner-column mt-lg-5 pt-lg-5 my-lg-5" style="max-width: 75rem; height: auto; margin: 0 auto; padding: 0 1.25rem;">
                 <img src="src/img/grayPreview.png" alt="missing img-banner-bike" class="banner-image">
                 <div class="banner-inner">
@@ -139,8 +139,8 @@
         </section>
     </div>
 
-    <div class="row page" id="div_shop">
-        <section class="row page">
+    <div class="row page" style="display: none;" id="div_shop">
+        <section class="row">
             <div class="container banner-column mt-5 pt-5 my-5" style="max-width: 75rem; height: auto; margin: 0 auto; padding: 0 1.25rem;">
                 <div class="banner-inner">
                     <h2 class="heading-xl ps-5 mt-4">Buy NOW</h2>
@@ -282,8 +282,8 @@
     <div class="row page" style="display: none;" id="div_contact">
         <section style="background-color: whitesmoke;">
             <div class="container my-lg-5">
-                <div class="row align-items-center" style="height: 400px;">
-                    <div class="col-lg-12 col-sm-12 text-center">
+                <div class="row align-items-center" style="height: 250px;">
+                    <div class="col-lg-12 col-sm-12 text-center mb-0 pb-0">
                         <h1 style="letter-spacing: 7px; font-size: 40pt; color: #2EEFE2;">SEND A MESSAGE</h1>
                         <h3 id="text" style="letter-spacing: 3px; font-size: 15pt;" class="text-black"></h3>
                         <p style="font-size: small;" class="text-black">We always welcome your feedback about our service and your in-store experience – whether you found it friendly and helpful, or it fell short of your expectations.</p>
@@ -396,11 +396,11 @@
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                         How to be a millionaire?
                                     </button>
                                 </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                                     </div>
