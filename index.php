@@ -15,23 +15,19 @@
 
 <body>
 
-    <div id="pane_user" style="display: none;">
+    <div id="pane_user">
 
         <?php include 'src/pages/user.php'; ?>
 
     </div>
 
-<<<<<<< Updated upstream
-    <div id="pane_admin" style="display: none;">
-=======
     <div id="pane_admin" style="display:none;">
->>>>>>> Stashed changes
 
         <?php include 'src/pages/admin.php'; ?>
 
     </div>
 
-    <div id="pane_controlpanel" style="display: block;">
+    <div id="pane_controlpanel" style="display: none;">
 
         <?php include 'src/pages/control_panel.php'; ?>
 

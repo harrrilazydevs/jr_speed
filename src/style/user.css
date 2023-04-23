@@ -133,8 +133,7 @@ img {
 
 .heading.xl {
     font-family: inherit;
-    font-size: clamp(2.658rem, 6vw, 4.241rem);
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.15;
     letter-spacing: -1px;
 }
@@ -658,9 +657,8 @@ span {
 }
 
 .banner-links .instagram:hover {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: #fd5849be !important;
     -webkit-background-clip: text;
-    /* Also define standard property for compatibility */
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -683,7 +681,7 @@ span {
 .banner-links>* {
     font-size: 1.25rem;
     line-height: 1.25;
-    color: var(--color-black-200);
+    color: var(--color-white-200);
 }
 
 .banner-links::before {
@@ -693,7 +691,7 @@ span {
     width: 4rem;
     height: 1.5px;
     transform: rotate(90deg);
-    background: var(--color-black-200);
+    background: var(--color-white-200);
 }
 
 .banner-links::after {
@@ -703,7 +701,7 @@ span {
     width: 4rem;
     height: 1.5px;
     transform: rotate(90deg);
-    background: var(--color-black-200);
+    background: var(--color-white-200);
 }
 
 .btn {
@@ -747,7 +745,7 @@ span {
     margin: 0 auto;
     position: relative;
     width: 100%;
-    max-width: 1500px;
+    max-width: 2s500px;
     height: 700px;
     margin-top: 5rem;
     overflow: hidden;

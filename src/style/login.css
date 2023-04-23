@@ -47,7 +47,7 @@ section.side {
 .side span {
   font-size: 150px;
   font-weight: 900;
-  background: url(../img/sideForm.jpg);
+  background: url(../img/textBG.jpgs);
   -webkit-background-clip: text;
   background-clip: text;
   color: white;
@@ -81,7 +81,7 @@ form {
 .separator {
   width: 150px;
   height: 4px;
-  background-color: hsl(221, 83%, 53%);
+  background-color: #0ABFBC;
   
   margin: 24px;
 }
@@ -133,7 +133,7 @@ input ~ i {
 }
 
 input:focus ~ i {
-  color:  hsl(221, 83%, 53%);
+  color: #0ABFBC;
 }
 
 button.submit {
@@ -143,7 +143,7 @@ button.submit {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
-  background-color:  hsl(221, 83%, 53%);
+  background-image: linear-gradient(to right, #2afadf, #4c83ff);
   cursor: pointer;
   transition: opacity 0.4s;
 }

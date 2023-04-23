@@ -82,14 +82,14 @@
 </header>
 <div style="overflow: hidden;">
 
-    <div class="row page" style="display: none; background: rgb(182,182,182); background: linear-gradient(90deg, rgba(182,182,182,1) 0%, rgba(156,156,156,0.8981967787114846) 100%);" id="div_home">
+    <div class="row page" style="display: none; background-image: linear-gradient(to bottom, #0f223f, #464c65, #7a7c8e, #b0afb9, #e6e6e6);" id="div_home">
         <!-- HOME SECTION -->
         <section class="row page" id="div_home">
             <div class="container banner-column mt-lg-5 pt-lg-5 my-lg-5" style="max-width: 75rem; height: auto; margin: 0 auto; padding: 0 1.25rem;">
                 <img src="src/img/grayPreview.png" alt="missing img-banner-bike" class="banner-image">
                 <div class="banner-inner">
-                    <h1 class="heading-xl">Buy NOW, Ride ANYWHERE</h1>
-                    <p class="paragraph">
+                    <h2s class="heading-xl text-white">Buy NOW, Ride ANYWHERE</h2s>
+                    <p class="paragraph text-white">
                         Start your journey by discovering Jrspeed PH,
                         as you ride your bike, parts will wear down and need tuning or replacing.
                         Keep your steed in top notch condition by having it professionally maintained by our factory trained technicians.
