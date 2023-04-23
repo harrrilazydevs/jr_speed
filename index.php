@@ -21,7 +21,11 @@
 
     </div>
 
+<<<<<<< Updated upstream
     <div id="pane_admin" style="display: none;">
+=======
+    <div id="pane_admin" style="display:none;">
+>>>>>>> Stashed changes
 
         <?php include 'src/pages/admin.php'; ?>
 
