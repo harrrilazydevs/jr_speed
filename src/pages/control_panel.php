@@ -51,6 +51,12 @@
                                 Accounts Maintenance
                             </a>
                         </li>
+                        <li class="mb-1" id="btn_goto_dm">
+                            <a class="text-dark ms-1">
+                                <i class="fa-solid fa-truck  fa-fw fa-sm pe-1"></i>
+                                Delivery Maintenance
+                            </a>
+                        </li>
                     </ul>
                 </li>
 
@@ -79,7 +85,7 @@
                     <ul class="sidenav-list ms-0 ps-1">
 
                         <li class="mb-1">
-                            <a class="text-dark ms-1 btn_logout" >
+                            <a class="text-dark ms-1 btn_logout">
                                 <i class="fa-solid fa-arrow-right-from-bracket fa-fw fa-sm pe-1"></i>
                                 Logout
                             </a>
@@ -510,7 +516,7 @@
 
 
     </div>
-    
+
 </div>
 
 <div id="pane_admin" style="display:none;">

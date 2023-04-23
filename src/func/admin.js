@@ -22,6 +22,10 @@ $("#btn_goto_sm").click(function () {
   }, 200);
 });
 
+$('#btn_goto_dm').click(function(){
+  alert('...')
+})
+
 $("#btn_goto_slm").click(function () {
   $(".page").hide();
   $("#div_cp_slm").show();
@@ -200,6 +204,8 @@ function load_stocks() {
 
       output += `
       <td class="text-center">`+ val.low_stock_indicator + `</td>
+
+      <td class="text-center">` + val.date_modified + `</td>
         <td class="text-end">
 
           <a class=" hoverable-btn" > <i class="fa-solid fa-pen-to-square"></i><a/>

@@ -9,7 +9,8 @@ $q = '
                product_id,
                stock_count,
                low_stock_indicator,
-               name	
+               name,
+               date_modified
         FROM
                 tbl_stocks A
         LEFT JOIN    

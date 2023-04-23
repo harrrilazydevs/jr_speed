@@ -1,11 +1,4 @@
-<?php
-// session_start();
 
-if ($_SESSION['user'] == 0) {
-    // header('location:login.php?');
-}
-
-?>
 
 <header class="header" id="header">
     <nav class="navbar container">
@@ -35,7 +28,7 @@ if ($_SESSION['user'] == 0) {
         </div>
 
         <?php
-            if ($_SESSION['user'] == 0) {
+            if ($_SESSION['authorized'] == 0) {
                 echo "<div class='sign-in-up'>
                 <a href='login.php' class='menu-block'>Login</a>
                 </div>
