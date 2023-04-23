@@ -1,5 +1,9 @@
+let products = {};
+
+
 $(document).ready(function () {
-  load_bikes();
+
+  load_products();
 
   $("#btn_goto_adminpanel").click(function () {
     $("#pane_admin").hide();
@@ -36,10 +40,19 @@ $(document).ready(function () {
   });
 
   $("#btn_goto_am").click(function () {
+
     $(".page").hide();
     $("#div_cp_am").show();
     $(".clickable").trigger("click");
+
+    load_accounts()
   });
+
+  $("#btn_pm_add").click(function () {
+    $('#cp_md_add_product').modal('show')
+  })
+
+
 
   ctx = document.getElementById("slm_chart").getContext("2d");
 
@@ -76,45 +89,122 @@ $(document).ready(function () {
     });
   }
 
-  function load_bikes() {
-    $.getJSON("src/database/func/admin/read_bike_list.php", (data) => {
+  function load_products() {
+
+    $.getJSON("src/database/func/admin/read_products_list.php", (data) => {
       output = "";
       counter = 1;
 
       $.each(data, function (key, val) {
-        output +=
-          `
-          <tr>
-              <td class="text-center">` +
-          counter +
-          `</td>
-              <td>` +
-          val.type +
-          `</td>
-              <td>` +
-          val.name +
-          `</td>
-              <td><a href="` +
-          val.img +
-          `" target="_blank">` +
-          val.img +
-          `</a></td>
-              <td>₱` +
-          val.price.toLocaleString("en-US") +
-          `</td>
-              <td class="text-end">
-                  <i class="hoverable-btn fa-solid fa-eye"></i>
-                  <i class="hoverable-btn fa-solid fa-pen-to-square"></i>
-                  <i class="hoverable-btn fa-solid fa-box-archive"></i>
-              </td>
-          </tr>
-        `;
+        output += ` 
+        <tr>
+          <td class="text-center ps-0">`+ counter + `</td>
+          <td>`+ val.name + `</td>
+          <td>`+ val.description + `</td>
+
+          <td class="text-center">`+ val.type + `</td>
+
+          <td>₱`+ val.price.toLocaleString("en-US") + `</td>
+          <td class="text-end">
+            <a class="btn_view_product hoverable-btn" prod_id="`+ val.id + `"> <i class="fa-solid fa-eye"></i><a/>
+            <a class="btn_edit_product hoverable-btn" prod_id="`+ val.id + `"> <i class="fa-solid fa-pen-to-square"></i><a/>
+            <a class="btn_archive_product hoverable-btn" prod_id="`+ val.id + `"> <i class="fa-solid fa-box-archive"></i><a/>
+          </td>
+        </tr>`;
 
         counter = counter + 1;
+
+        products['P' + val.id] =
+        {
+          type: val.type,
+          name: val.name,
+          img: val.img,
+          price: val.price,
+          description: val.description
+        }
+
       });
 
-      $("#cp_tbl_bikeslist tbody").empty().append(output);
+      $("#cp_tbl_productlist tbody").empty().append(output)
+
+      $('.btn_view_product').click(function () {
+        $('#cp_md_vw_product').modal('show')
+        $('#vwp_img').attr('src', products['P' + $(this).attr('prod_id')].img)
+        $('#vwp_type').val(products['P' + $(this).attr('prod_id')].type)
+        $('#vwp_name').val(products['P' + $(this).attr('prod_id')].name)
+        $('#vwp_price').val(products['P' + $(this).attr('prod_id')].price)
+        $('#vwp_description').val(products['P' + $(this).attr('prod_id')].description)
+      })
+
+      $('.btn_edit_product').click(function () {
+        $('#cp_md_ed_product').modal('show')
+        $('#edp_img').attr('src', products['P' + $(this).attr('prod_id')].img)
+        $('#edp_type').val(products['P' + $(this).attr('prod_id')].type)
+        $('#edp_name').val(products['P' + $(this).attr('prod_id')].name)
+        $('#edp_price').val(products['P' + $(this).attr('prod_id')].price)
+        $('#edp_description').val(products['P' + $(this).attr('prod_id')].description)
+      })
+
     });
+
+  }
+
+  function load_accounts() {
+
+    $.getJSON("src/database/func/admin/read_accounts_list.php", (data) => {
+      output = "";
+      counter = 1;
+
+      $.each(data, function (key, val) {
+        output += ` 
+        <tr>
+          <td class="text-center ps-0">`+ counter + `</td>
+          <td>`+ val.user + `</td>
+          <td>`+ val.email + `</td>
+          <td class="text-center">`+ val.contact + `</td>
+          <td class="text-center">`+ val.position.toUpperCase() + `</td>
+          <td class="text-end">
+            <a class="btn_view_product hoverable-btn" prod_id="`+ val.id + `"> <i class="fa-solid fa-eye"></i><a/>
+            <a class="btn_edit_product hoverable-btn" prod_id="`+ val.id + `"> <i class="fa-solid fa-pen-to-square"></i><a/>
+            <a class="btn_archive_product hoverable-btn" prod_id="`+ val.id + `"> <i class="fa-solid fa-box-archive"></i><a/>
+          </td>
+        </tr>`;
+
+        counter = counter + 1;
+
+        // products['P' + val.id] =
+        // {
+        //   type: val.type,
+        //   name: val.name,
+        //   img: val.img,
+        //   price: val.price,
+        //   description: val.description
+        // }
+
+      });
+
+      $("#cp_tbl_accountlist tbody").empty().append(output)
+
+      // $('.btn_view_product').click(function () {
+      //   $('#cp_md_vw_product').modal('show')
+      //   $('#vwp_img').attr('src', products['P' + $(this).attr('prod_id')].img)
+      //   $('#vwp_type').val(products['P' + $(this).attr('prod_id')].type)
+      //   $('#vwp_name').val(products['P' + $(this).attr('prod_id')].name)
+      //   $('#vwp_price').val(products['P' + $(this).attr('prod_id')].price)
+      //   $('#vwp_description').val(products['P' + $(this).attr('prod_id')].description)
+      // })
+
+      // $('.btn_edit_product').click(function () {
+      //   $('#cp_md_ed_product').modal('show')
+      //   $('#edp_img').attr('src', products['P' + $(this).attr('prod_id')].img)
+      //   $('#edp_type').val(products['P' + $(this).attr('prod_id')].type)
+      //   $('#edp_name').val(products['P' + $(this).attr('prod_id')].name)
+      //   $('#edp_price').val(products['P' + $(this).attr('prod_id')].price)
+      //   $('#edp_description').val(products['P' + $(this).attr('prod_id')].description)
+      // })
+
+    });
+
   }
 
   function load_bike_stocks() {
@@ -123,35 +213,22 @@ $(document).ready(function () {
       counter = 1;
 
       $.each(data, function (key, val) {
-        output +=
-          `
-          <tr>
-              <td class="text-center">` +
-          counter +
-          `</td>
-              <td>` +
-          val.type +
-          `</td>
-              <td>` +
-          val.name +
-          `</td>
-              <td><a href="` +
-          val.img +
-          `" target="_blank">` +
-          val.img +
-          `</a></td>
-              <td>₱` +
-          val.price.toLocaleString("en-US") +
-          `</td>
-              <td class="text-end">
-                  <i class="hoverable-btn fa-solid fa-eye"></i>
-                  <i class="hoverable-btn fa-solid fa-pen-to-square"></i>
-                  <i class="hoverable-btn fa-solid fa-box-archive"></i>
-              </td>
-          </tr>
-        `;
+        output += ` 
+        <tr>
+            <td class="text-center">`+ counter + `</td>
+            <td>`+ val.type + `</td>
+            <td>`+ val.name + `</td>
+            <td>`+ al.img + `</td>
+            <td>₱`+ val.price.toLocaleString("en-US") + `</td>
+            <td class="text-end">
+                <i class="hoverable-btn fa-solid fa-eye"></i>
+                <i class="hoverable-btn fa-solid fa-pen-to-square"></i>
+                <i class="hoverable-btn fa-solid fa-box-archive"></i>
+            </td>
+        </tr>`;
 
         counter = counter + 1;
+
       });
 
       $("#cp_tbl_bikeslist tbody").empty().append(output);

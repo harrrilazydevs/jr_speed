@@ -7,7 +7,7 @@ $q = '
         SELECT 
                 *
         FROM
-                tbl_bikes
+                tbl_products
 ';
 
 $db = new Database();
