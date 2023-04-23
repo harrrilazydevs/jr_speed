@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-// if ($_SESSION['authorized'] == 0) {
-//     header('location:login.php?');
-// }
+if ($_SESSION['authorized'] == 0) {
+    // header('location:login.php?');
+}
 
 ?>
 
