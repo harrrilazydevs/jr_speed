@@ -1,49 +1,90 @@
 <header class="header" id="header">
-    <nav class="nav bd-container">
-        <a href="index.php">
-            <li href="index.php" class="nav__logo" style="font-size: larger;"><img src="src/img/jrspeed.png" style="width: 50px; height: 50px;"> JRSpeed</li>
+    <nav class="navbar container">
+        <a href="#" class="company">
+            <img src="src/img/jrspeed.png" alt="missing img-company-logo" class="companyLogo" id="companyLogo">
+            <span class="companyName" id="companyName">JRSpeed</span>
         </a>
-        <div class="nav__menu mt-lg-3" id="nav-menu">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="index.php" class="nav__link active-link">Home</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Shop</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">FAQ</a></li>
-
-                <?php
-                    if (isset($_SESSION['auth'])) {
-                        ?>
-                            <li class="nav-item nav__item dropdown">
-                                <a class="dropdown-toggle nav__link" href="#" id="navbarDropdown" data-bs-toggle="dropdown">
-                                    <?= $_SESSION['auth_user']['name']; ?>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="nav__link dropdown-item text-black" href="#"><i class="fa-solid fa-cart-shopping fa-xs pe-lg-2"></i>My Cart</a></li>
-                                    <li><a class="nav__link dropdown-item text-black" href="#"><i class="fa-solid fa-user fa-xs pe-lg-2"></i>My Profile</a></li>
-                                    <li><a class="nav__link dropdown-item text-black" href="#"><i class="fa-solid fa-right-from-bracket fa-xs pe-lg-2"></i>Logout</a></li>
-                                </ul>
-                            </li>
-                        <?php
-
-                        }else{
-                        ?>
-                            <li class="nav__item"><a href="#" class="nav__link  text-center text-white" style="background: #2463EB; border-radius:100px; width:100px; border: none;">Sign in</a></li>
-                        <?php
-                    }
-                ?>
+        <div class="burger" id="burger">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </div>
+        <div class="menu" id="menu">
+            <ul class="menu-inner pe-4">
+                <li class="menu-item"><a href="index.php" class="menu-link" id="header-home">Home</a></li>
+                <li class="menu-item"><a href="#" class="menu-link" id="header-shop">Shop</a></li>
+                <li class="menu-item"><a href="contact.php" class="menu-link" id="header-contact">Contact</a></li>
+                <li class="menu-item"><a href="#" class="menu-link" id="header-faq">FAQ</a></li>
             </ul>
         </div>
-        <div class="nav__toggle" id="nav-toggle">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+
+        <?php
+            if ((isset($_SESSION['submit-login']) && $_SESSION['submit-login'] == true) || (isset($_SESSION['submit-register']) && $_SESSION['submit-register'] == true)) {
+                echo "
+                    <navigation-user-container>
+                        <div class='user' id='user-header'>
+                            <ul>
+
+                                <div class='navbar-notification'>
+                                    <li>
+                                        <i class='bx bx-bell' id='notification'></i>
+                                    </li>
+                                </div>
+                                
+                                <li>
+                                    <i class='bx bx-shopping-bag' id='cart'></i>
+                                </li>
+                                <li class='user-dropdown-menu'>
+                                    <img src='$_SESSION[profile_img]' alt='Profile Image' class='profile'> 
+                                        <ul class='user-menu'>
+                                            <li class = 'sub-item '>
+                                                <div class='user-name'>
+                                                    $_SESSION[name]
+                                                </div>
+                                            </li>
+                                            
+                                            <li class = 'sub-item'>
+                                                <i class='bx bx-edit'>
+                                                <a href='#'>Profile</a></i>
+                                            </li>
+
+                                            <li class = 'sub-item'>
+                                                <i class='bx bx-heart'>
+                                                <a href='#'>Wishlist</a></i>
+                                            </li>
+                                            <li class = 'sub-item'>
+                                                <i class='bx bx-box'>
+                                                <a href='#'>My Orders</a></i>
+                                            </li>
+                                            <li class = 'sub-item'>
+                                                <i class='bx bx-exit' >
+                                                <a href='logout.php'>Logout</a></i>
+                                            </li>
+
+                                        </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </navigation-user-container>
+                    
+                    <script src='userDropdown.js'></script>
+                    <script src='burgerList.js'></script>
+                    ";
+            }else{
+                echo "<div class='sign-in-up'>
+                        <a href='login.php' class='menu-block'>Login</a>
+                    </div>
+                    <script src='burgerList.js'></script>
+                    ";
+            }
+        ?>
     </nav>
 </header>
-
 <div style="overflow: hidden;">
 
-    <div class="row page" style="display: none;" id="div_home">
+    <div class="row page" style="display: none; background: rgb(182,182,182); background: linear-gradient(90deg, rgba(182,182,182,1) 0%, rgba(156,156,156,0.8981967787114846) 100%);" id="div_home">
         <!-- HOME SECTION -->
-        <section class="row page mt-5 pt-5 my-5" id="div_home">
+        <section class="row page" id="div_home">
             <div class="container banner-column mt-lg-5 pt-lg-5 my-lg-5" style="max-width: 75rem; height: auto; margin: 0 auto; padding: 0 1.25rem;">
                 <img src="src/img/grayPreview.png" alt="missing img-banner-bike" class="banner-image">
                 <div class="banner-inner">
@@ -98,13 +139,13 @@
         </section>
     </div>
 
-    <div class="row page" id="div_shop">
+    <div class="row page" style="display: none;" id="div_shop">
         <section style="background-image: url('src/img/contact_sec.png') !important; background-repeat: no-repeat; background-position: left !important; background-size: cover; background-attachment: fixed;">
-            <div class=" container">
+            <div class="container mt-lg-5 my-lg-5">
                 <div class="row align-items-center" style="height: 300px;">
                     <div class="col-lg-12 col-sm-12 text-center mt-lg-5">
                         <h1 style="letter-spacing: 7px; font-size: 40pt;" class="text-white">Our Shop</h1>
-                        <a href="#" class="nav__link  text-center text-white" style="background: #2463EB; border-radius:130px; width:150px; border: none;">View More <i class="fa-solid fa-eye"></i></a>
+                        <a href='#' class='menu-block'>View More <i class="fa-solid fa-eye"></i></a>
                     </div>
                 </div>
             </div>
@@ -119,12 +160,12 @@
                         <div class="row">
                             <div class="col-lg-4 mb-sm-3 mb-3">
                                 <a href="#">
-                                    <div class="card mt-lg-3" style="background-color: #101419 !important; width: 80%; height: 100%; border: none;">
+                                    <div class="card mt-lg-3" style="background-color: #E6E6E6 !important; width: 100%; height: 100%; border: none;">
                                         <div class="card-body text-center">
                                             <div class="image_hover">
                                                 <img src="src/img/bikes/exploro-ultra-force-d1eagle-axs-1x-removebg-preview.png" alt="Category Image" width="100%">
                                             </div>
-                                            <h6 style="letter-spacing: 3px; font-size: 12pt; color: white;">Bike #1</h6>
+                                            <h6 style="letter-spacing: 3px; font-size: 12pt; color: black;">Bike #1</h6>
                                         </div>
                                     </div>
                                 </a>
@@ -132,12 +173,12 @@
 
                             <div class="col-lg-4 mb-sm-3 mb-3">
                                 <a href="#">
-                                    <div class="card mt-lg-3" style="background-color: #101419 !important; width: 80%; height: 100%; border: none;">
+                                    <div class="card mt-lg-3" style="background-color: #E6E6E6 !important; width: 100%; height: 100%; border: none;">
                                         <div class="card-body text-center">
                                             <div class="image_hover">
                                                 <img src="src/img/bikes/exploro-ultra-rival-1x11_650b-removebg-preview.png" alt="Category Image" width="100%">
                                             </div>
-                                            <h6 style="letter-spacing: 3px; font-size: 12pt; color: white;">Bike #1</h6>
+                                            <h6 style="letter-spacing: 3px; font-size: 12pt; color: black;">Bike #1</h6>
                                         </div>
                                     </div>
                                 </a>
@@ -145,28 +186,29 @@
 
                             <div class="col-lg-4 mb-sm-3 mb-3">
                                 <a href="#">
-                                    <div class="card mt-lg-3" style="background-color: #101419 !important; width: 80%; height: 100%; border: none;">
+                                    <div class="card mt-lg-3" style="background-color: #E6E6E6 !important; width: 100%; height: 100%; border: none;">
                                         <div class="card-body text-center">
                                             <div class="image_hover">
                                                 <img src="src/img/bikes/exploro-ultra-rival-1x11-removebg-preview.png" alt="Category Image" width="100%">
                                             </div>
-                                            <h6 style="letter-spacing: 3px; font-size: 12pt; color: white;">Bike #1</h6>
+                                            <h6 style="letter-spacing: 3px; font-size: 12pt; color: black;">Bike #1</h6>
                                         </div>
                                     </div>
                                 </a>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-12">
                         <div class="row">
                             <div class="col-lg-4 mb-sm-3 mb-3">
                                 <a href="#">
-                                    <div class="card mt-lg-3" style="background-color: #101419 !important; width: 80%; height: 100%; border: none;">
+                                    <div class="card mt-lg-3" style="background-color: #E6E6E6 !important; width: 100%; height: 100%; border: none;">
                                         <div class="card-body text-center">
                                             <div class="image_hover">
                                                 <img src="src/img/bikes/new-strada-force-d1-axs-2x12-removebg-preview.png" alt="Category Image" width="100%">
                                             </div>
-                                            <h6 style="letter-spacing: 3px; font-size: 12pt; color: white;">Bike #1</h6>
+                                            <h6 style="letter-spacing: 3px; font-size: 12pt; color: black;">Bike #1</h6>
                                         </div>
                                     </div>
                                 </a>
@@ -174,12 +216,12 @@
 
                             <div class="col-lg-4 mb-sm-3 mb-3">
                                 <a href="#">
-                                    <div class="card mt-lg-3" style="background-color: #101419 !important; width: 80%; height: 100%; border: none;">
+                                    <div class="card mt-lg-3" style="background-color: #E6E6E6 !important; width: 100%; height: 100%; border: none;">
                                         <div class="card-body text-center">
                                             <div class="image_hover">
                                                 <img src="src/img/bikes/strada-icr-rival-axs-2x12-removebg-preview.png" alt="Category Image" width="100%">
                                             </div>
-                                            <h6 style="letter-spacing: 3px; font-size: 12pt; color: white;">Bike #1</h6>
+                                            <h6 style="letter-spacing: 3px; font-size: 12pt; color: black;">Bike #1</h6>
                                         </div>
                                     </div>
                                 </a>
@@ -187,12 +229,12 @@
 
                             <div class="col-lg-4 mb-sm-3 mb-3">
                                 <a href="#">
-                                    <div class="card mt-lg-3" style="background-color: #101419 !important; width: 80%; height: 100%; border: none;">
+                                    <div class="card mt-lg-3" style="background-color: #E6E6E6 !important; width: 100%; height: 100%; border: none;">
                                         <div class="card-body text-center">
                                             <div class="image_hover">
                                                 <img src="src/img/bikes/strada-icr-rival-xplr-removebg-preview.png" alt="Category Image" width="100%">
                                             </div>
-                                            <h6 style="letter-spacing: 3px; font-size: 12pt; color: white;">Bike #1</h6>
+                                            <h6 style="letter-spacing: 3px; font-size: 12pt; color: black;">Bike #1</h6>
                                         </div>
                                     </div>
                                 </a>
@@ -206,7 +248,7 @@
 
     <div class="row page" style="display: none;" id="div_contact">
         <section style="background-image: url('src/img/contact_sec.png') !important; background-repeat: no-repeat; background-position: left !important; background-size: cover; background-attachment: fixed;">
-            <div class=" container">
+            <div class="container my-lg-5">
                 <div class="row align-items-center" style="height: 400px;">
                     <div class="col-lg-12 col-sm-12 text-center">
                         <h1 style="letter-spacing: 7px; font-size: 40pt; color: #2EEFE2;">SEND A MESSAGE</h1>
@@ -220,7 +262,7 @@
         <section class="mt-5 pt-4 my-5">
             <div class="container">
                 <div class="row miv-vh-100 align-items-center">
-                    <div class="row text-center">
+                    <div class="row text-center text-black">
                         <h1 style="letter-spacing: 5px; font-size: 20pt; color: #2463EB;" class="pb-lg-0 mb-lg-2">CONTACT INFO</h1>
                         <p class="mb-xs-5" style="font-size: small;">
                             <i class="fa-solid fa-phone phone flex-end" style="color: green;"></i>&nbsp; Phone - 0917 828 0280
@@ -235,7 +277,7 @@
                         <iframe style="filter: grayscale(100%) invert(10%);" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.5207077539153!2d121.05717707299615!3d14.626357985863065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b78dc6b27359%3A0xce1e9928e81c07ab!2sJRSPEED%20Bicycle%20%26%20Motorcycle%20Parts%20Store!5e0!3m2!1sen!2sph!4v1681807317395!5m2!1sen!2sph" width="100%" height="470" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
-                    <div class="col-lg-5 offset-lg-1">
+                    <div class="col-lg-5 offset-lg-1 text-black">
                         <form>
                             <div class="mb-3">
                                 <small>Name</small>
@@ -254,7 +296,7 @@
                                 <small>Message</small>
                                 <textarea cols="30" rows="4" class="form-control"></textarea>
                             </div>
-                            <a href="#" class="nav__link  text-center text-white" style="background: #2463EB; border-radius:100px; width:100px; border: none;">Submit</a>
+                            <a href='#' class='menu-block'>Submit</a>
                         </form>
                     </div>
                 </div>
@@ -262,9 +304,9 @@
         </section>
     </div>
 
-    <div class="row page"  style="display:none;" id="div_faq" >
-        <section style="background-color: var(--section);" class="mt-lg-3 mt-5">
-            <div class=" container">
+    <div class="row page"  style="display: none;" id="div_faq" >
+        <section style="background-color: black;">
+            <div class="container my-lg-5">
                 <div class="row align-items-center" style="height: 200px;">
                     <div class="col-lg-12 col-sm-12 text-center pt-5">
                         <h1 style="letter-spacing: 4px; font-size: 20pt;">Frequenly Asked Questions <span>(FAQ).</span></h1>
@@ -337,4 +379,5 @@
             </div>
         </section>
     </div>
+
 </div>
