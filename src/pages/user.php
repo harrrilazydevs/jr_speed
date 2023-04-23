@@ -139,7 +139,7 @@
         </section>
     </div>
 
-    <div class="row page" style="display: ;" id="div_shop">
+    <div class="row page" style="display: none;" id="div_shop">
         <section class="row page">
             <div class="container banner-column mt-5 pt-5 my-5" style="max-width: 75rem; height: auto; margin: 0 auto; padding: 0 1.25rem;">
                 <div class="banner-inner">
@@ -252,9 +252,8 @@
 
     </div>
 
-
-    <div class="row page" style="display: none; background-image: url('src/img/shop_sec.png') !important; background-repeat: no-repeat; background-position: left !important; background-size: cover; background-attachment: fixed;" id="div_contact">
-        <section style="background-color: white;">
+    <div class="row page"  id="div_contact">
+        <section style="background-color: whitesmoke;">
             <div class="container my-lg-5">
                 <div class="row align-items-center" style="height: 400px;">
                     <div class="col-lg-12 col-sm-12 text-center">
@@ -269,9 +268,9 @@
         <section class="mt-5 pt-4 my-5">
             <div class="container">
                 <div class="row miv-vh-100 align-items-center">
-                    <div class="row text-center text-white">
-                        <h1 style="letter-spacing: 5px; font-size: 20pt; color: #2463EB;" class="pb-lg-0 mb-lg-2">CONTACT INFO</h1>
-                        <p class="mb-xs-5 text-white" style="font-size: small;">
+                    <div class="row text-center">
+                        <h1 style="letter-spacing: 5px; font-size: 20pt; color: black;" class="pb-lg-0 mb-lg-2">CONTACT INFO</h1>
+                        <p class="mb-xs-5 text-black" style="font-size: small;">
                             <i class="fa-solid fa-phone phone flex-end" style="color: green;"></i>&nbsp; Phone - 0917 828 0280
                             &nbsp;&nbsp;
                             <i class="fa-solid fa-envelope mail" style="color: #2463EB;"></i>&nbsp; Email - luckyjunreyes@gmail.com
@@ -284,7 +283,7 @@
                         <iframe style="filter: grayscale(100%) invert(10%);" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.5207077539153!2d121.05717707299615!3d14.626357985863065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b78dc6b27359%3A0xce1e9928e81c07ab!2sJRSPEED%20Bicycle%20%26%20Motorcycle%20Parts%20Store!5e0!3m2!1sen!2sph!4v1681807317395!5m2!1sen!2sph" width="100%" height="470" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
-                    <div class="col-lg-5 offset-lg-1 text-white">
+                    <div class="col-lg-5 offset-lg-1 text-black">
                         <form>
                             <div class="mb-3">
                                 <small>Name</small>
