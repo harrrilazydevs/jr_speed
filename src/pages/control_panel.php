@@ -2,55 +2,18 @@
 
     <div class="container">
 
-        <div class="navbar-brand logo" href="#">
+        <span class="logo ps-0 btn_cp_close_sidebar" id="cp_logo" type="button" data-bs-toggle="offcanvas" data-bs-target="#nav_cp_sidebar">
 
-            <img src="src/img/jrspeed.png" class="clickable" width="40" type="button" data-bs-toggle="offcanvas" data-bs-target="#nav_cp_sidebar">
+            <img src="src/img/jrspeed.png" alt="missing img-company-logo" class="companyLogo">
 
-            <span style="vertical-align: middle;">Control Panel</span>
+            <span class="companyName" style="font-size:20pt;">Control Panel</span>
 
-        </div>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-        <div class="collapse navbar-collapse ms-lg-5" id="navbarNav">
-
-            <ul class="navbar-nav">
-
-                <!-- <li class="nav-item">
-
-                        <a id="btn_goto_home" class="nav-link text-light active" aria-current="page" href="#">HOME</a>
-
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a id="btn_goto_shop" class="nav-link text-light" href="#">SHOP</a>
-
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a id="btn_goto_contact" class="nav-link text-light" href="#">CONTACT</a>
-
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a id="btn_goto_faq" class="nav-link text-light" href="#">FAQ</a>
-
-                    </li> -->
-
-            </ul>
-
-        </div>
+        </span>
 
         <button class="btn btn-primary d-none d-lg-block" style="font-size:10pt" id="btn_goto_admin"><i class="fa-solid fa-user"></i> View as Customer</button>
 
     </div>
+
 </nav>
 
 
@@ -58,27 +21,33 @@
 
     <div class="offcanvas-header" style=" height: 8vh; background:#101419;">
 
-        <div class="navbar-brand logo " href="#">
+        <span class="logo ps-0 btn_cp_close_sidebar" id="" type="button" data-bs-toggle="offcanvas" data-bs-target="#nav_cp_sidebar">
 
-            <img src="src/img/jrspeed.png" class="clickable" width="40" type="button" data-bs-toggle="offcanvas" data-bs-target="#nav_sidebar">
+            <img src="src/img/jrspeed.png" alt="missing img-company-logo" class="companyLogo">
 
-            <span style="vertical-align: middle;">Control Panel</span>
+            <span class="companyName" style="font-size:20pt;">Control Panel</span>
 
-        </div>
+        </span> 
 
     </div>
 
     <div class="offcanvas-body px-0">
 
-        <ul>
+        <ul style="margin:0; padding:0;">
             <li class="mb-2 ms-3">
                 <small class="text-secondary">MAINTENANCE</small>
-                <ul class="sidenav-list">
-                    <li class="mb-1" id="btn_goto_bm"><a class="text-dark ms-3">
-                            <i class="fa-solid fa-bicycle fa-fw fa-sm pe-1"></i> Product Maintenance</a>
+                <ul class="sidenav-list ms-0 ps-1">
+                    <li class="mb-1" id="btn_goto_bm">
+                        <a class="text-dark ms-1">
+                            <i class="fa-solid fa-bicycle fa-fw fa-sm pe-1"></i>
+                            Product Maintenance
+                        </a>
                     </li>
-                    <li class="mb-1" id="btn_goto_am"><a class="text-dark ms-3">
-                            <i class="fa-solid fa-user-group  fa-fw fa-sm pe-1"></i> Accounts Maintenance</a>
+                    <li class="mb-1" id="btn_goto_am">
+                        <a class="text-dark ms-1">
+                            <i class="fa-solid fa-user-group  fa-fw fa-sm pe-1"></i>
+                            Accounts Maintenance
+                        </a>
                     </li>
                 </ul>
             </li>
@@ -86,12 +55,18 @@
 
             <li class="mb-1 ms-3">
                 <small class="text-secondary">MONITORING</small>
-                <ul class="sidenav-list">
-                    <li class="mb-1" id="btn_goto_sm"><a class="text-dark ms-3">
-                            <i class="fa-solid fa-cart-flatbed fa-fw fa-sm pe-1"></i></i> Stocks Monitoring</a>
+                <ul class="sidenav-list ms-0 ps-1">
+                    <li class="mb-1" id="btn_goto_sm">
+                        <a class="text-dark ms-1">
+                            <i class="fa-solid fa-cart-flatbed fa-fw fa-sm pe-1"></i></i>
+                            Stocks Monitoring
+                        </a>
                     </li>
-                    <li class="mb-1" id="btn_goto_slm"><a class="text-dark ms-3">
-                            <i class="fa-solid fa-sack-dollar fa-fw fa-sm pe-1"></i> Sales Monitoring</a>
+                    <li class="mb-1" id="btn_goto_slm">
+                        <a class="text-dark ms-1">
+                            <i class="fa-solid fa-sack-dollar fa-fw fa-sm pe-1"></i>
+                            Sales Monitoring
+                        </a>
                     </li>
                 </ul>
             </li>
