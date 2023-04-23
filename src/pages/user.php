@@ -11,10 +11,10 @@
         </div>
         <div class="menu" id="menu">
             <ul class="menu-inner pe-4">
-                <li class="menu-item"><a href="index.php" class="menu-link" id="header-home">Home</a></li>
-                <li class="menu-item"><a href="#" class="menu-link" id="header-shop">Shop</a></li>
-                <li class="menu-item"><a href="contact.php" class="menu-link" id="header-contact">Contact</a></li>
-                <li class="menu-item"><a href="#" class="menu-link" id="header-faq">FAQ</a></li>
+                <li class="menu-item"><a class="menu-link" id="header_home">Home</a></li>
+                <li class="menu-item"><a class="menu-link" id="header_shop">Shop</a></li>
+                <li class="menu-item"><a class="menu-link" id="header_contact">Contact</a></li>
+                <li class="menu-item"><a class="menu-link" id="header_faq">FAQ</a></li>
             </ul>
         </div>
 
@@ -82,7 +82,7 @@
 </header>
 <div style="overflow: hidden;">
 
-    <div class="row page" style="display: none;" id="div_home">
+    <div class="row page" style="display: block;" id="div_home">
         <!-- HOME SECTION -->
         <section class="row" id="div_home">
             <div class="container banner-column mt-lg-5 pt-lg-5 my-lg-5" style="max-width: 75rem; height: auto; margin: 0 auto; padding: 0 1.25rem;">
@@ -252,11 +252,11 @@
 
     </div>
 
-    <div class="row page"  id="div_contact">
+    <div class="row page" style="display: none;" id="div_contact">
         <section style="background-color: whitesmoke;">
             <div class="container my-lg-5">
-                <div class="row align-items-center" style="height: 400px;">
-                    <div class="col-lg-12 col-sm-12 text-center">
+                <div class="row align-items-center" style="height: 250px;">
+                    <div class="col-lg-12 col-sm-12 text-center mb-0 pb-0">
                         <h1 style="letter-spacing: 7px; font-size: 40pt; color: #2EEFE2;">SEND A MESSAGE</h1>
                         <h3 id="text" style="letter-spacing: 3px; font-size: 15pt;" class="text-black"></h3>
                         <p style="font-size: small;" class="text-black">We always welcome your feedback about our service and your in-store experience – whether you found it friendly and helpful, or it fell short of your expectations.</p>

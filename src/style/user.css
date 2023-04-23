@@ -132,20 +132,20 @@ img {
     box-shadow: var(--shadow-medium);
 }
 
-#header-home.on-scroll,
-#header-shop.on-scroll,
-#header-contact.on-scroll,
-#header-faq.on-scroll,
+#header_home.on-scroll,
+#header_shop.on-scroll,
+#header_contact.on-scroll,
+#header_faq.on-scroll,
 #companyName.on-scroll,
 #notification.on-scroll,
 #cart.on-scroll {
     color: var(--color-white-100);
 }
 
-#header-home.on-scroll:hover,
-#header-shop.on-scroll:hover,
-#header-contact.on-scroll:hover,
-#header-faq.on-scroll:hover,
+#header_home.on-scroll:hover,
+#header_shop.on-scroll:hover,
+#header_contact.on-scroll:hover,
+#header_faq.on-scroll:hover,
 #companyName.on-scroll:hover,
 #notification.on-scroll:hover,
 #cart.on-scroll:hover {
