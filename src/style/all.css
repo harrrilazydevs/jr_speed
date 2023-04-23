@@ -14,13 +14,10 @@ body {
   margin: 0 !important;
 }
 
-.logo>span {
-  font-size: 24pt;
-  font-weight: 600 !important;
-  line-height: 1.5 !important;
-  letter-spacing: -1px !important;
-  color: white !important;
-  margin-top: 20px;
+.logo {
+  display: flex;
+  align-items: center;
+  transition: all .3s ease-in-out;
 }
 
 .table td {
@@ -30,11 +27,12 @@ body {
 .sidenav-list {
   font-size: 11pt;
   letter-spacing: 1.0;
+  margin: 0;
 }
 
 .sidenav-list>li:hover {
   border-right: 2px solid #101419;
-  margin-left: 30px;
+  margin-left: 15px;
   cursor: pointer;
   background: #d4e8ff !important;
 }
@@ -48,11 +46,12 @@ body {
 }
 
 .bg-dark,
-.hoverable-btn {
+.hoverable-btn,
+.lead{
   color: #101419 !important;
 }
 
-.hoverable-btn >svg:hover {
+.hoverable-btn>svg:hover {
   cursor: pointer;
   transform: scale(1.2);
   color: #4c4c4ca3
@@ -61,3 +60,12 @@ body {
 .btn-sm {
   font-size: 10pt !important;
 }
+
+#btn_control_panel:hover {
+  cursor: pointer;
+}
+
+#pane_controlpanel{
+  color:#101419 !important;
+}
+
