@@ -11,23 +11,80 @@
         </div>
         <div class="menu" id="menu">
             <ul class="menu-inner pe-4">
-                <li class="menu-item"><a class="menu-link" id="header_home">Home</a></li>
-                <li class="menu-item"><a class="menu-link" id="header_shop">Shop</a></li>
-                <li class="menu-item"><a class="menu-link" id="header_contact">Contact</a></li>
-                <li class="menu-item"><a class="menu-link" id="header_faq">FAQ</a></li>
+                <li class="menu-item"><a href="index.php" class="menu-link" id="header-home">Home</a></li>
+                <li class="menu-item"><a href="#" class="menu-link" id="header-shop">Shop</a></li>
+                <li class="menu-item"><a href="contact.php" class="menu-link" id="header-contact">Contact</a></li>
+                <li class="menu-item"><a href="#" class="menu-link" id="header-faq">FAQ</a></li>
             </ul>
         </div>
-        <div class='sign-in-up'>
-            <a href='login.php' class='menu-block'>Login</a>
-        </div>
 
+        <?php
+        if ((isset($_SESSION['submit-login']) && $_SESSION['submit-login'] == true) || (isset($_SESSION['submit-register']) && $_SESSION['submit-register'] == true)) {
+            echo "
+                    <navigation-user-container>
+                        <div class='user' id='user-header'>
+                            <ul>
+
+                                <div class='navbar-notification'>
+                                    <li>
+                                        <i class='bx bx-bell' id='notification'></i>
+                                    </li>
+                                </div>
+                                
+                                <li>
+                                    <i class='bx bx-shopping-bag' id='cart'></i>
+                                </li>
+                                <li class='user-dropdown-menu'>
+                                    <img src='$_SESSION[profile_img]' alt='Profile Image' class='profile'> 
+                                        <ul class='user-menu'>
+                                            <li class = 'sub-item '>
+                                                <div class='user-name'>
+                                                    $_SESSION[name]
+                                                </div>
+                                            </li>
+                                            
+                                            <li class = 'sub-item'>
+                                                <i class='bx bx-edit'>
+                                                <a href='#'>Profile</a></i>
+                                            </li>
+
+                                            <li class = 'sub-item'>
+                                                <i class='bx bx-heart'>
+                                                <a href='#'>Wishlist</a></i>
+                                            </li>
+                                            <li class = 'sub-item'>
+                                                <i class='bx bx-box'>
+                                                <a href='#'>My Orders</a></i>
+                                            </li>
+                                            <li class = 'sub-item'>
+                                                <i class='bx bx-exit' >
+                                                <a href='logout.php'>Logout</a></i>
+                                            </li>
+
+                                        </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </navigation-user-container>
+                    
+                    <script src='userDropdown.js'></script>
+                    <script src='burgerList.js'></script>
+                    ";
+        } else {
+            echo "<div class='sign-in-up'>
+                        <a href='login.php' class='menu-block'>Login</a>
+                    </div>
+                    <script src='burgerList.js'></script>
+                    ";
+        }
+        ?>
     </nav>
 </header>
 <div style="overflow: hidden;">
 
     <div class="row page" style="display: none;" id="div_home">
         <!-- HOME SECTION -->
-        <section class="row">
+        <section class="row" id="div_home">
             <div class="container banner-column mt-lg-5 pt-lg-5 my-lg-5" style="max-width: 75rem; height: auto; margin: 0 auto; padding: 0 1.25rem;">
                 <img src="src/img/grayPreview.png" alt="missing img-banner-bike" class="banner-image">
                 <div class="banner-inner">
@@ -74,7 +131,6 @@
         <section class="feature">
             <div class="feature-title">
                 <h3 class="feature-title-display">What's Hot</h3>
-                <p>Philippines!</p>
             </div>
 
             <div class="feature-items">
@@ -97,12 +153,13 @@
                         View More! <i class="fa-solid fa-eye"></i></a>
                 </div>
             </div>
+
         </section>
 
-        <section style="display: block;">
+        <section>
             <div class="container py-5">
                 <div class="row min-vh-50">
-                    <h3 class="text-black">Our Products</h3>
+                    <h3 class="text-black ps-5">Our Products</h3>
                     <hr class="text-black">
                     <div class="col-lg-12">
                         <div class="row">
@@ -192,11 +249,11 @@
                 </div>
             </div>
         </section>
+
     </div>
 
-    <div class="row page" style="display: block; background-image: url('src/img/shop_sec.png') !important; background-repeat: no-repeat; background-position: left !important; background-size: cover; background-attachment: fixed;" id="div_contact">
-
-        <section style="background-color: white;">
+    <div class="row page"  id="div_contact">
+        <section style="background-color: whitesmoke;">
             <div class="container my-lg-5">
                 <div class="row align-items-center" style="height: 400px;">
                     <div class="col-lg-12 col-sm-12 text-center">
@@ -208,12 +265,12 @@
             </div>
         </section>
 
-        <section class="mt-5 pt-4 mt-5" style="">
+        <section class="mt-5 pt-4 my-5">
             <div class="container">
                 <div class="row miv-vh-100 align-items-center">
-                    <div class="row text-center text-white">
-                        <h1 style="letter-spacing: 5px; font-size: 20pt; color: #2463EB;" class="pb-lg-0 mb-lg-2">CONTACT INFO</h1>
-                        <p class="mb-xs-5 text-white" style="font-size: small;">
+                    <div class="row text-center">
+                        <h1 style="letter-spacing: 5px; font-size: 20pt; color: black;" class="pb-lg-0 mb-lg-2">CONTACT INFO</h1>
+                        <p class="mb-xs-5 text-black" style="font-size: small;">
                             <i class="fa-solid fa-phone phone flex-end" style="color: green;"></i>&nbsp; Phone - 0917 828 0280
                             &nbsp;&nbsp;
                             <i class="fa-solid fa-envelope mail" style="color: #2463EB;"></i>&nbsp; Email - luckyjunreyes@gmail.com
@@ -226,7 +283,7 @@
                         <iframe style="filter: grayscale(100%) invert(10%);" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.5207077539153!2d121.05717707299615!3d14.626357985863065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b78dc6b27359%3A0xce1e9928e81c07ab!2sJRSPEED%20Bicycle%20%26%20Motorcycle%20Parts%20Store!5e0!3m2!1sen!2sph!4v1681807317395!5m2!1sen!2sph" width="100%" height="470" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
-                    <div class="col-lg-5 offset-lg-1 text-white">
+                    <div class="col-lg-5 offset-lg-1 text-black">
                         <form>
                             <div class="mb-3">
                                 <small>Name</small>
