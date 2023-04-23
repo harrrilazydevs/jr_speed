@@ -132,6 +132,7 @@ img {
     box-shadow: var(--shadow-medium);
 }
 
+#header_cart.on-scroll,
 #header_home.on-scroll,
 #header_shop.on-scroll,
 #header_contact.on-scroll,
@@ -142,6 +143,7 @@ img {
     color: var(--color-white-100);
 }
 
+#header_cart.header.on-scroll:hover,
 #header_home.on-scroll:hover,
 #header_shop.on-scroll:hover,
 #header_contact.on-scroll:hover,

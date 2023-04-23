@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// if ($_SESSION['authorized'] == 0) {
+//     header('location:login.php?');
+// }
+
+?>
+
 <header class="header" id="header">
     <nav class="navbar container">
         <a href="#" class="company">
@@ -18,7 +27,17 @@
             </ul>
         </div>
 
+        <div class="menu me-0" id="menu">
+            <ul class="menu-inner pe-0 me-0">
+                <li class="menu-item"><a class="menu-link" id="header_cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+
+            </ul>
+        </div>
+
         <?php
+
+
+
         if ((isset($_SESSION['submit-login']) && $_SESSION['submit-login'] == true) || (isset($_SESSION['submit-register']) && $_SESSION['submit-register'] == true)) {
             echo "
                     <navigation-user-container>

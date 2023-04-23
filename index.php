@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+
+session_start();
+
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -15,28 +20,28 @@
 
 <body>
 
-    <div id="pane_user" style="display: block;">
+    <?php
 
-        <?php include 'src/pages/user.php'; ?>
+    if ($_SESSION['position'] == 'administrator') {
+        include 'src/pages/control_panel.php';
+    } else {
+        include 'src/pages/user.php';
+    }
 
-    </div>
+    ?>
 
-    <div id="pane_admin" style="display:none;">
+    <div class="pane" id="pane_admin" style="display:none;">
 
         <?php include 'src/pages/admin.php'; ?>
 
     </div>
 
-    <div id="pane_controlpanel" style="display: none;">
-
-        <?php include 'src/pages/control_panel.php'; ?>
-
-    </div>
 
     <script src="src/bootstrap/bs.js"></script>
     <script src="src/jquery/jquery.js"></script>
     <script src="src/fontawesome/fa.js"></script>
     <script src="src/chartsjs/chart.js"></script>
+
 
     <script src="src/func/all.js"></script>
     <script src="src/func/user.js"></script>

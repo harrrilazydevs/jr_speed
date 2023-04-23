@@ -62,15 +62,16 @@ $(document).ready(function () {
 
   load_products();
 
-  $("#btn_goto_adminpanel").click(function () {
+  $("#btn_goto_controlpanel").click(function () {
     $("#pane_admin").hide();
-    $("#pane_controlpanel").show();
+    $("#pane_control_panel").show();
     $("#div_cp_bm").show();
   });
 
   $("#btn_goto_admin").click(function () {
     $("#pane_admin").show();
-    $("#pane_controlpanel").hide();
+    $("#pane_control_panel").hide();
+    $('#header_home').click();
   });
 
 
