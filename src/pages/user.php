@@ -82,14 +82,14 @@
 </header>
 <div style="overflow: hidden;">
 
-    <div class="row page" style="display: none; background-image: linear-gradient(to bottom, #0f223f, #464c65, #7a7c8e, #b0afb9, #e6e6e6);" id="div_home">
+    <div class="row page" style="display: none;" id="div_home">
         <!-- HOME SECTION -->
         <section class="row page" id="div_home">
             <div class="container banner-column mt-lg-5 pt-lg-5 my-lg-5" style="max-width: 75rem; height: auto; margin: 0 auto; padding: 0 1.25rem;">
                 <img src="src/img/grayPreview.png" alt="missing img-banner-bike" class="banner-image">
                 <div class="banner-inner">
-                    <h2s class="heading-xl text-white">Buy NOW, Ride ANYWHERE</h2s>
-                    <p class="paragraph text-white">
+                    <h2 class="heading-xl">Buy NOW, Ride ANYWHERE</h2>
+                    <p class="paragraph">
                         Start your journey by discovering Jrspeed PH,
                         as you ride your bike, parts will wear down and need tuning or replacing.
                         Keep your steed in top notch condition by having it professionally maintained by our factory trained technicians.
@@ -139,12 +139,12 @@
         </section>
     </div>
 
-    <div class="row page" style="display: none;" id="div_shop">
-        <section style="background-image: url('src/img/contact_sec.png') !important; background-repeat: no-repeat; background-position: left !important; background-size: cover; background-attachment: fixed;">
+    <div class="row page" id="div_shop">
+        <section style="background-color: whitesmoke;">
             <div class="container mt-lg-5 my-lg-5">
                 <div class="row align-items-center" style="height: 300px;">
                     <div class="col-lg-12 col-sm-12 text-center mt-lg-5">
-                        <h1 style="letter-spacing: 7px; font-size: 40pt;" class="text-white">Our Shop</h1>
+                        <h1 style="letter-spacing: 7px; font-size: 40pt;" class="text-black">Our Shop</h1>
                         <a href='#' class='menu-block'>View More <i class="fa-solid fa-eye"></i></a>
                     </div>
                 </div>
@@ -154,8 +154,8 @@
         <section>
             <div class="container py-5">
                 <div class="row min-vh-50">
-                    <h3>Our Products</h3>
-                    <hr>
+                    <h3 class="text-black">Our Products</h3>
+                    <hr class="text-black">
                     <div class="col-lg-12">
                         <div class="row">
                             <div class="col-lg-4 mb-sm-3 mb-3">
@@ -246,25 +246,26 @@
         </section>
     </div>
 
-    <div class="row page" style="display: none;" id="div_contact">
-        <section style="background-image: url('src/img/contact_sec.png') !important; background-repeat: no-repeat; background-position: left !important; background-size: cover; background-attachment: fixed;">
+    <div class="row page" style="display: none; background-image: url('src/img/shop_sec.png') !important; background-repeat: no-repeat; background-position: left !important; background-size: cover; background-attachment: fixed;" id="div_contact">
+
+        <section style="background-color: white;">
             <div class="container my-lg-5">
                 <div class="row align-items-center" style="height: 400px;">
                     <div class="col-lg-12 col-sm-12 text-center">
                         <h1 style="letter-spacing: 7px; font-size: 40pt; color: #2EEFE2;">SEND A MESSAGE</h1>
-                        <h3 id="text" style="letter-spacing: 3px; font-size: 15pt;" class="text-white"></h3>
-                        <p style="font-size: small;" class="text-white">We always welcome your feedback about our service and your in-store experience – whether you found it friendly and helpful, or it fell short of your expectations.</p>
+                        <h3 id="text" style="letter-spacing: 3px; font-size: 15pt;" class="text-black"></h3>
+                        <p style="font-size: small;" class="text-black">We always welcome your feedback about our service and your in-store experience – whether you found it friendly and helpful, or it fell short of your expectations.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="mt-5 pt-4 my-5">
+        <section class="mt-5 pt-4 my-5" style="">
             <div class="container">
                 <div class="row miv-vh-100 align-items-center">
-                    <div class="row text-center text-black">
+                    <div class="row text-center text-white">
                         <h1 style="letter-spacing: 5px; font-size: 20pt; color: #2463EB;" class="pb-lg-0 mb-lg-2">CONTACT INFO</h1>
-                        <p class="mb-xs-5" style="font-size: small;">
+                        <p class="mb-xs-5 text-white" style="font-size: small;">
                             <i class="fa-solid fa-phone phone flex-end" style="color: green;"></i>&nbsp; Phone - 0917 828 0280
                             &nbsp;&nbsp;
                             <i class="fa-solid fa-envelope mail" style="color: #2463EB;"></i>&nbsp; Email - luckyjunreyes@gmail.com
@@ -277,7 +278,7 @@
                         <iframe style="filter: grayscale(100%) invert(10%);" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.5207077539153!2d121.05717707299615!3d14.626357985863065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b78dc6b27359%3A0xce1e9928e81c07ab!2sJRSPEED%20Bicycle%20%26%20Motorcycle%20Parts%20Store!5e0!3m2!1sen!2sph!4v1681807317395!5m2!1sen!2sph" width="100%" height="470" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
-                    <div class="col-lg-5 offset-lg-1 text-black">
+                    <div class="col-lg-5 offset-lg-1 text-white">
                         <form>
                             <div class="mb-3">
                                 <small>Name</small>
@@ -305,8 +306,8 @@
     </div>
 
     <div class="row page"  style="display: none;" id="div_faq" >
-        <section style="background-color: black;">
-            <div class="container my-lg-5">
+        <section style="background-color: whitesmoke;">
+            <div class="container my-lg-5 text-black">
                 <div class="row align-items-center" style="height: 200px;">
                     <div class="col-lg-12 col-sm-12 text-center pt-5">
                         <h1 style="letter-spacing: 4px; font-size: 20pt;">Frequenly Asked Questions <span>(FAQ).</span></h1>

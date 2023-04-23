@@ -8,8 +8,6 @@
     --color-blue-600: hsl(221, 83%, 53%);
     --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
         0 2px 4px -1px rgba(0, 0, 0, 0.06);
-
-
 }
 
 * {
@@ -40,28 +38,10 @@ main {
     overflow: hidden;
 }
 
-::-webkit-scrollbar {
-    width: 10px;
+span {
+    color: var(--color-blue-600);
 }
 
-::-webkit-scrollbar-track {
-    background: #303030;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-*,
-::before,
-::after {
-    box-sizing: border-box;
-
-}
 
 a,
 button {
@@ -112,7 +92,6 @@ img {
     .banner-section {
         margin-bottom: 5rem;
     }
-
 }
 
 @media (min-width: 768px) {
@@ -120,8 +99,6 @@ img {
     .banner-section {
         margin-bottom: 5rem;
     }
-
-
 }
 
 .container {
@@ -133,7 +110,8 @@ img {
 
 .heading.xl {
     font-family: inherit;
-    font-weight: 400;
+    font-size: clamp(2.658rem, 6vw, 4.241rem);
+    font-weight: 700;
     line-height: 1.15;
     letter-spacing: -1px;
 }
@@ -161,7 +139,7 @@ img {
 #companyName.on-scroll,
 #notification.on-scroll,
 #cart.on-scroll {
-    color: var(--color-white-200);
+    color: var(--color-white-100);
 }
 
 #header-home.on-scroll:hover,
@@ -199,7 +177,7 @@ img {
 .companyLogo {
     width: 2.5rem;
     height: auto;
-    /* filter: brightness(8%); */
+    filter: brightness(8%);
 }
 
 #companyLogo.on-scroll {
@@ -212,7 +190,7 @@ img {
     font-weight: 600;
     line-height: 1.5;
     letter-spacing: -1px;
-    color: var(--color-white-200);
+    color: var(--color-black-200);
     text-transform: uppercase;
 }
 
@@ -269,7 +247,7 @@ img {
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.5;
-    color: var(--color-white-200);
+    color: var(--color-black-200);
     text-transform: uppercase;
     transition: all .3s ease;
 }
@@ -326,10 +304,8 @@ img {
 @media (min-width: 768px) {
 
     .menu-inner a {
-        color: var(--color-white-200);
+        color: var(--color-black-200);
     }
-
-
 }
 
 .burger {
@@ -372,7 +348,7 @@ img {
     outline: none;
     opacity: 1;
     transform: rotate(0);
-    background-color: var(--color-white-200);
+    background-color: var(--color-black-200);
     transition: .25s ease-in-out;
 }
 
@@ -413,7 +389,6 @@ img {
         opacity: 0;
         transition: all .45s ease;
     }
-
 }
 
 
@@ -482,10 +457,6 @@ img {
     font-weight: 500;
     margin: 0.4rem 0;
 
-}
-
-span {
-    color: var(--color-blue-600);
 }
 
 .user li i:hover {
@@ -657,8 +628,9 @@ span {
 }
 
 .banner-links .instagram:hover {
-    color: #fd5849be !important;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     -webkit-background-clip: text;
+    /* Also define standard property for compatibility */
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -681,7 +653,7 @@ span {
 .banner-links>* {
     font-size: 1.25rem;
     line-height: 1.25;
-    color: var(--color-white-200);
+    color: var(--color-black-200);
 }
 
 .banner-links::before {
@@ -691,7 +663,7 @@ span {
     width: 4rem;
     height: 1.5px;
     transform: rotate(90deg);
-    background: var(--color-white-200);
+    background: var(--color-black-200);
 }
 
 .banner-links::after {
@@ -701,7 +673,7 @@ span {
     width: 4rem;
     height: 1.5px;
     transform: rotate(90deg);
-    background: var(--color-white-200);
+    background: var(--color-black-200);
 }
 
 .btn {
@@ -745,7 +717,7 @@ span {
     margin: 0 auto;
     position: relative;
     width: 100%;
-    max-width: 2s500px;
+    max-width: 2500px;
     height: 700px;
     margin-top: 5rem;
     overflow: hidden;
@@ -756,6 +728,7 @@ span {
     background-color: var(--color-white-100);
     box-shadow: var(--shadow-medium);
 }
+
 
 @media (max-width: 64rem) {
     .carousel {

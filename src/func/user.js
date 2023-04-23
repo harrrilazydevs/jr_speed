@@ -28,6 +28,17 @@ window.addEventListener("scroll", () => {
 });
 
 
+var i=0,text;
+text = "Contact JRSPEED PH."
+function typing() {
+  if (i < text.length) {
+    document.getElementById("text").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 50);
+  }
+}
+typing();
+
 
 // Navigation bar
 const navbarMenu = document.getElementsByClassName('menu');
@@ -120,16 +131,6 @@ togglePasswordButton.addEventListener('click', function () {
 
 
 
-var i=0,text;
-text = "Contact JRSPEED PH."
-function typing() {
-  if (i < text.length) {
-    document.getElementById("text").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typing, 50);
-  }
-}
-typing();
 
 $(document).ready(function () {
   $(".btn_nav_home").click(function () {
