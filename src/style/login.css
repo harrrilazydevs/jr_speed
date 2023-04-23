@@ -320,4 +320,21 @@ button.submit:hover {
   .side {
     display: none;
   }
-}/*# sourceMappingURL=login-style.css.map */
+}
+@media (min-width: 820px) {
+  .side{
+    display: none !important;
+  }
+
+  section.side {
+    display: none !important;
+
+  }
+  .login-container{
+    margin-left: 11rem !important;
+  }
+  #remember-me{
+    margin-left: 60rem !important;
+    
+  }
+}
