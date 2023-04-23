@@ -1,6 +1,10 @@
 let products = {};
 var x = 0;
 
+$('#btn_generate_report').click(function () {
+  $('#cp_md_generate_report').modal('show')
+})
+
 $("#btn_goto_bm").click(function () {
   $(".page").hide();
   $("#div_cp_bm").show();
@@ -12,6 +16,7 @@ $("#btn_goto_bm").click(function () {
 $("#btn_goto_sm").click(function () {
   $(".page").hide();
   $("#div_cp_sm").show();
+  load_stocks()
   setTimeout(() => {
     $('.btn_cp_close_sidebar').trigger('click');
   }, 200);
@@ -24,10 +29,6 @@ $("#btn_goto_slm").click(function () {
     $('.btn_cp_close_sidebar').trigger('click');
   }, 200);
 
-  write_chart(
-    ["RB 1", "MTB 2", "RB 3", "RB 4", "MTB 5", "CB 6"],
-    [12, 19, 3, 5, 2, 100]
-  );
 });
 
 $("#btn_goto_am").click(function () {
@@ -49,6 +50,10 @@ $('.btn_cp_close_sidebar').click(function () {
     $('#cp_logo').css('opacity', 1);
     x = 0;
   }
+})
+
+$('#btn_stocks_add').click(function () {
+  $('#cp_md_add_stock').modal('show')
 })
 
 
@@ -74,42 +79,6 @@ $(document).ready(function () {
   })
 
 
-  ctx = document.getElementById("slm_chart").getContext("2d");
-
-  var myChart = new Chart(ctx, {
-    type: "line",
-    data: {},
-    options: {},
-  });
-
-  function write_chart(products, sales) {
-    myChart.destroy();
-
-    myChart = new Chart(ctx, {
-      type: "line",
-      data: {
-        labels: products, //['Borgir 1', 'Borgir 2', 'Borgir 3', 'Borgir 4', 'Borgir 5', 'Borgir 6'],
-        datasets: [
-          {
-            label: "No of Sales",
-            data: sales, //[12, 19, 3, 5, 2, 100],
-            backgroundColor: ["rgba(255, 99, 132, 0.2)"],
-            borderColor: ["rgba(255, 99, 132, 1)"],
-            borderWidth: 1,
-          },
-        ],
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-          },
-        },
-      },
-    });
-  }
-
-
 });
 
 
@@ -117,6 +86,7 @@ function load_products() {
 
   $.getJSON("src/database/func/admin/read_products_list.php", (data) => {
     output = "";
+    sel_product = "";
     counter = 1;
 
     $.each(data, function (key, val) {
@@ -136,6 +106,10 @@ function load_products() {
         </td>
       </tr>`;
 
+      sel_product += `
+      <option value="`+ val.id + `">` + val.name + `</option>
+      `;
+
       counter = counter + 1;
 
       products['P' + val.id] =
@@ -149,7 +123,10 @@ function load_products() {
 
     });
 
+
+
     $("#cp_tbl_productlist tbody").empty().append(output)
+    $("#stock_product_id").empty().append(sel_product)
 
     $('.btn_view_product').click(function () {
       $('#cp_md_vw_product').modal('show')
@@ -183,8 +160,8 @@ function load_accounts() {
       output += ` 
       <tr>
         <td class="text-center ps-0">`+ counter + `</td>
-        <td>`+ val.user + `</td>
-        <td>`+ val.email + `</td>
+        <td class="text-center">`+ val.user + `</td>
+        <td class="text-center">`+ val.email + `</td>
         <td class="text-center">`+ val.contact + `</td>
         <td class="text-center">`+ val.position.toUpperCase() + `</td>
         <td class="text-end">
@@ -231,8 +208,8 @@ function load_accounts() {
 
 }
 
-function load_bike_stocks() {
-  $.getJSON("src/database/func/admin/read_bike_list.php", (data) => {
+function load_stocks() {
+  $.getJSON("src/database/func/admin/read_stocks.php", (data) => {
     output = "";
     counter = 1;
 
@@ -240,21 +217,31 @@ function load_bike_stocks() {
       output += ` 
       <tr>
           <td class="text-center">`+ counter + `</td>
-          <td>`+ val.type + `</td>
-          <td>`+ val.name + `</td>
-          <td>`+ al.img + `</td>
-          <td>₱`+ val.price.toLocaleString("en-US") + `</td>
-          <td class="text-end">
-              <i class="hoverable-btn fa-solid fa-eye"></i>
-              <i class="hoverable-btn fa-solid fa-pen-to-square"></i>
-              <i class="hoverable-btn fa-solid fa-box-archive"></i>
-          </td>
+          <td>`+ val.name + `</td>`
+
+      if (val.stock_count > val.low_stock_indicator) {
+        output += ` <td class="text-center"><span style="width:40px" class="badge text-bg-success">` + val.stock_count + `</span></td>`;
+      } else {
+        output += ` <td class="text-center"><span style="width:40px" class="badge text-bg-danger">` + val.stock_count + `</span></td>`;
+      }
+
+      output += `
+      <td class="text-center">`+ val.low_stock_indicator + `</td>
+        <td class="text-end">
+
+          <a class=" hoverable-btn" > <i class="fa-solid fa-pen-to-square"></i><a/>
+          <a class=" hoverable-btn" > <i class="fa-solid fa-box-archive"></i><a/>
+
+        </td>
       </tr>`;
+
+
+
 
       counter = counter + 1;
 
     });
 
-    $("#cp_tbl_bikeslist tbody").empty().append(output);
+    $("#cp_tbl_stocks tbody").empty().append(output);
   });
 }
